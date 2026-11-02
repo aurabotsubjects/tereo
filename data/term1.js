@@ -634,7 +634,7 @@
           ['How would you say: What is she doing? She is singing.','Kei~te|k aha|q ia?|a* Kei~te|k waiata|n* ia.|a','kay teh AH-hah EE-ah · kay teh why-AH-tah EE-ah','ia = he or she, in the same spot as ahau and koe. waiata = sing.',null,'Whole class'],
           ['How would you say: Hello, I am Sam. What are you doing? I am reading.','Kia~ora.|w Ko|k Sam|p ahau.|a Kei~te|k aha|q koe?|a Kei~te|k pānui|n ahau.|a','KEE-ah OR-ah. kor Sam ah-HOW. kay teh AH-hah KOH-eh. kay teh PAH-noo-ee ah-HOW','Weeks 1 and 5 together.',null,'Pairs'],
           ['Class chain: greet the next person, ask what they are doing, they mime and answer, say goodbye.','Kia~ora.|w Kei~te|k aha|q koe?|a Kei~te|k ___|n ahau.|a Ka~kite!|w','KEE-ah OR-ah… kay teh AH-hah KOH-eh… kay teh ___ ah-HOW… kah KEE-teh','Real conversation, nothing memorised.','Pass it around the room, each person turning to the next. If you stumble, that’s my fault, not yours.','Individual']],
-        DR:{title:'Te Wā Takaro — Playtime',cast:CAST_TAMA_KAIAKO,lines:[
+        DR:{title:'Te Wā Tākaro — Playtime',cast:CAST_TAMA_KAIAKO,lines:[
           ['Kaiako Rose','Kia ora, tamariki! Kei te aha koe, Hana?','Hello, children! What are you doing, Hana?','(arms wide)'],
           ['Hana','Kei te pānui ahau.','I am reading.','(holds up a book)'],
           ['Kaiako Rose','Kei te aha koe, Tama?','What are you doing, Tama?',''],

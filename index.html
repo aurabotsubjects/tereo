@@ -108,7 +108,8 @@ body.calm .ch.anim,body.calm .pop{animation:none!important}
 .vcg{display:grid;grid-template-columns:1fr 1fr;gap:6px}.vcg div{border:1.5px solid var(--emerald);border-radius:8px;padding:5px 9px}.vcg b{font:900 14pt Outfit,system-ui,sans-serif;color:var(--ocean)}.vcg i{display:block;color:var(--emerald2);font-weight:700}
 .pat{border:2.5px dashed var(--lime);border-radius:10px;padding:8px 14px;font:900 15pt Outfit,system-ui,sans-serif;margin:8px 0;color:var(--ocean)}
 @media print{@page{size:A4;margin:0}html,body{overflow:visible!important;height:auto!important;background:#fff}#bg,#cv,#tint,#top,#foot,#stage,#notes,#modal,#menu,#tip,.nop{display:none!important}#doc{position:static;display:block!important;background:#fff;padding:0;overflow:visible}.pg{box-shadow:none;margin:0;width:210mm;height:296mm;overflow:hidden;break-after:page}.pg:last-child{break-after:auto}}
-@media(max-width:700px){.chips{display:none}#stage{padding:84px 4vw 110px}}
+@media(max-width:1500px){#top{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}#top::-webkit-scrollbar{display:none}#top .tb{flex:none;white-space:nowrap;padding:5px 9px;font-size:.85rem}#top .who{flex:1 1 90px;min-width:90px}#stage{padding:72px 4vw 64px}}
+@media(max-width:700px){.chips{display:none}#stage{padding:72px 4vw 64px}}
 @media(prefers-reduced-motion:reduce){.gold,.clap{animation:none}}
 
 #land{position:fixed;inset:0;z-index:60;background:var(--night);cursor:pointer;overflow:hidden;display:flex;align-items:center;justify-content:center;text-align:center;transition:opacity .9s ease,transform .9s ease,visibility .9s}
@@ -160,7 +161,7 @@ html[data-term="4"]{--night:#140B2E;--ocean:#4B2A7A;--pounamu:#FF7F6B;--emerald:
 <p><small>No pressure: if the class forgets, that’s the teacher’s job to fix. We try. We laugh with, not at. We say it out loud.</small></p>
 <button class="tb" onclick="document.getElementById('modal').classList.remove('open')">Close</button></div></div>
 
-<div id="land" role="button" tabindex="0" aria-label="Enter the Te Reo Māori lesson app"><canvas id="lc"></canvas><div class="vig"></div><div class="in"><div class="kick">Years 5–6 · Aroha · Mōhio</div><h1><span>Te Reo</span><span>Māori</span></h1><p class="sub">Build sentences. Speak with confidence.</p><div class="go">Click to enter ▸</div></div><div class="sg">SOLI DEO GLORIA</div></div>
+<div id="land" role="button" tabindex="0" aria-label="Enter the Te Reo Māori lesson app"><canvas id="lc"></canvas><div class="vig"></div><div class="in"><div class="kick">Years 5–6 · Aroha · Mōhio · Manaaki · Pānga</div><h1><span>Te Reo</span><span>Māori</span></h1><p class="sub">Build sentences. Speak with confidence.</p><div class="go">Click to enter ▸</div></div><div class="sg">SOLI DEO GLORIA</div></div>
 <script src="data/shared.js"></script>
 <script src="data/term1.js"></script>
 <script src="data/term2.js"></script>
@@ -253,8 +254,11 @@ function setL(k){const L=LES[k];applyTerm(String(k).split(".")[0]);({VOC,STEPS,D
 let i=0,s=0,calm=matchMedia("(prefers-reduced-motion:reduce)").matches;
 const $=id=>document.getElementById(id),stage=$("stage");
 let curK="1.1.A";function save(){try{localStorage.setItem("trT1",JSON.stringify({k:curK,i}))}catch(e){}}
+let fitRO;function fitSl(){const sl=stage.firstElementChild;if(!sl||!stage.clientHeight)return;const cs=getComputedStyle(stage),av=stage.clientHeight-parseFloat(cs.paddingTop)-parseFloat(cs.paddingBottom),f=sl.offsetHeight>av?Math.max(.5,av/sl.offsetHeight):1;sl.style.transform=f<1?`scale(${f})`:""}
+addEventListener("resize",fitSl);
 function render(){
  const d=S[i];stage.innerHTML=`<div class="sl">${d.h(s)}</div>`;
+ if(window.ResizeObserver){fitRO&&fitRO.disconnect();fitRO=new ResizeObserver(fitSl);fitRO.observe(stage.firstElementChild)}fitSl();
  document.documentElement.style.setProperty("--acc",TH.acc[d.sec]);
  $("lab").textContent=`Section ${d.sec+1} of 7 · ${SECT[d.sec]} · ${TIME[d.sec]} · slide ${i+1} / ${S.length}`;
  $("pb").style.width=((i+1)/S.length*100)+"%";
@@ -290,7 +294,7 @@ let mt=1,mw=1;
 function menu(){const m=$("menu");m.innerHTML=`<div class="glass"><h2 class="h2" style="font-size:1.6rem">Choose a lesson</h2><div class="tabs">${TT.map((t,n)=>`<button class="tb" aria-pressed="${n+1==mt}" onclick="mt=${n+1};menu()">Term ${n+1} · ${t[0]}</button>`).join("")}</div><p style="margin:4px 0">${TT[mt-1][1]}</p><div class="wk">${TT[mt-1][2].map((w,n)=>`<button class="${mw==n+1?"on":""}" onclick="mw=${n+1};menu()"><b>Week ${n+1}</b>${w}</button>`).join("")}</div><h3 style="margin:8px 0 0">Week ${mw}: ${TT[mt-1][2][mw-1]}</h3><div class="tabs">${["A","B"].map((l,n)=>{const ok=!!LES[mt+"."+mw+"."+l];return `<button class="tb" ${ok?`onclick="goL('${l}')"`:"disabled"}>Lesson ${l} · Day ${n+1}${ok?"":" · coming soon"}</button>`}).join("")}</div><button class="tb" onclick="$('menu').classList.remove('open')">Close</button></div>`;m.classList.add("open")}
 const goL=l=>{$("menu").classList.remove("open");const k=mt+"."+mw+"."+l;if(LES[k]){setL(k);curK=k}$("lt").textContent="Term "+mt+" · Week "+mw+" · Lesson "+l;i=0;s=0;mode("teach")};
 function mode(m){document.body.classList.toggle("docmode",m!="teach");["teach","plan","vocab","ex","term"].forEach(x=>$("m_"+x).setAttribute("aria-pressed",x==m));if(m=="teach"){render();return}
- $("doc").innerHTML=`<div class="nop" style="width:min(210mm,100%);margin:0 auto 12px;display:flex;justify-content:space-between;align-items:center"><span>A4 preview · if Print does nothing, open the artifact in its own tab</span><button class="tb" onclick="window.print()">🖨 Print</button></div>`+DOCS[m]();$("doc").scrollTop=0}
+ $("doc").innerHTML=`<div class="nop" style="width:min(210mm,100%);margin:0 auto 12px;display:flex;justify-content:space-between;align-items:center"><span>A4 preview · press Print to print or save as a PDF</span><button class="tb" onclick="window.print()">🖨 Print</button></div>`+DOCS[m]();$("doc").scrollTop=0}
 const sa=x=>x.replace(/\|\w\*?/g,"").replace(/~/g," "),ln=n=>'<div class="ln"></div>'.repeat(n),ul=a=>`<ul>${a.map(x=>`<li>${x}</li>`).join("")}</ul>`;
 const tb=(h,r)=>`<table><tr>${h.map(x=>`<th>${x}</th>`).join("")}</tr>${r.map(a=>`<tr>${a.map(c=>`<td>${c}</td>`).join("")}</tr>`).join("")}</table>`;
 const ft=(t,n)=>`<div class="ft"><span>Soli Deo Gloria · ${CFG.school}</span><span>Te Reo Māori Y5–6 · ${t} · page ${n}</span></div>`;

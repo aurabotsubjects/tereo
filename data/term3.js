@@ -1,7 +1,6 @@
 /* ═════════════════════════════════════════════════════════════════════════════
    data/term3.js  ·  TERM 3 · MANAAKI  ·  “Kai, whānau, hākari”  (Serving and hospitality)
-   Weeks 1–7 written so far (14 lessons).  Term value: Manaaki (serve faithfully with our gifts and talents).
-   To add Week 8: copy a week block below, change the numbers/keys ('3.8.A', '3.8.B'), and write the content.
+   Weeks 1–10 written (20 lessons). Term 3 is complete.  Term value: Manaaki (serve faithfully with our gifts and talents).
    -----------------------------------------------------------------------------
    Needs data/shared.js loaded first.  One block per week; each block adds that
    week's glossary words and its two lessons (A and B).
@@ -21,12 +20,21 @@
   const cu3 = (strands, other) => curriculumRows(strands, other, 'Manaakitanga · Whanaungatanga');   // Term 3's Tātaiako pair
 
 
-  /* Term overview: shown in the lesson menu and on the printable Term pack. No rubric yet: until you add one (rubric: [...]), the Term pack uses Term 1's. */
+  /* Term overview: shown in the lesson menu and on the printable Term pack. rubric = Week 10 showcase criteria. */
   defineTerm(3, {
     value: "Manaaki",
     theme: "Kai, whānau, hākari",
     valueLine: "Manaaki: serve faithfully with our gifts and talents",
-    weeks: ["Kai","Happening now","Past: I","Future: Ka","When?","Saying no","Everyone (pronouns)","Manaaki in action","Serving others","Whakaaturanga"]
+    weeks: ["Kai","Happening now","Past: I","Future: Ka","When?","Saying no","Everyone (pronouns)","Manaaki in action","Serving others","Whakaaturanga"],
+    rubric: [
+      ['Greets and manaaki','Says Kia ora or Nau mai with help','Welcomes a guest: Nau mai. Tēnā koe. Noho mai. Offers to help: Ka āwhina ahau','Welcomes smoothly, chooses the right tēnā word (koe, kōrua, koutou) and offers to help'],
+      ['Kai and wants','Says one kai word with help','Offers or asks: Kei te pīrangi koe ki te parāoa? Anei te kai','Offers, answers and thanks: Kei te pīrangi koe ki te …? Āe, kia ora mō te kai'],
+      ['Doing now','Says E kai ana ahau with help','Says what we are doing: E kai ana tātou. E āwhina ana ahau','Uses the right people word (tāua, māua, mātou, rātou) with E … ana'],
+      ['Past and future','Says one time word or sentence with help','Says one past or future sentence: I haere ahau inanahi. Ka haere ahau āpōpō','Uses all three times correctly (I, E … ana, Ka) in one kōrero'],
+      ['Polite yes and no','Says Āe or Kāo','Answers: Āe, kei te … or Kāo, kāore ahau i te hiakai','Answers politely in a full sentence and accepts or declines kindly (Kāo, kia ora)'],
+      ['Pronunciation','Some vowels unclear','Mostly clear vowels','Clear vowels and macrons throughout'],
+      ['Confidence and encouragement','Needs prompts','Speaks with some support','Speaks clearly and cheers others (Ka pai! Ka rawe! Kia kaha!)']
+    ]
   });
 
 
@@ -314,7 +322,7 @@
           ['Now all of you: E mahi ana koutou. Say it.','E|k mahi|n ana|k koutou.|a*','eh MAH-hee AH-nah KOH-toh-oo','koutou = all of you (more than two).','Point at a group in the class. Koutou means all of you. Say it with me.','Echo'],
           ['How would you say: You all are playing. You all are running.','E|k tākaro|n ana|k koutou.|a E|k oma|n ana|k koutou.|a','eh TAH-kah-roh AH-nah KOH-toh-oo · eh OR-mah AH-nah KOH-toh-oo','Same frame again.',null,'Whole class'],
           ['They: E haere ana rātou. Say it. It means they are going.','E|k haere|n ana|k rātou.|a*','eh HIGH-reh AH-nah RAH-toh-oo','rātou = they (more than two).','Point away at a group. Rātou means they. Say it with me.','Echo'],
-          ['Group game: act out what a group is doing, the class says it in te reo.','E|k ___|n ana|k tātou / koutou / rātou.|a','eh ___ AH-nah TAH-toh-oo / KOH-toh-oo / RAH-toh-oo','A group mimes. Choose tātou, koutou or rātou, depending on who is in the group.','Three of you come up and mime an action. The class says what the group is doing, using koutou for the group. Then the group says it about themselves with tātou.','Whole class'],
+          ['Group game: act out what a group is doing, the class says it in te reo.','E|k ___|n ana|k tātou|a /|x koutou|a /|x rātou.|a','eh ___ AH-nah TAH-toh-oo / KOH-toh-oo / RAH-toh-oo','A group mimes. Choose tātou, koutou or rātou, depending on who is in the group.','Three of you come up and mime an action. The class says what the group is doing, using koutou for the group. Then the group says it about themselves with tātou.','Whole class'],
           ['New word: tuhituhi means write. How would you say: We are writing?','E|k tuhituhi|n* ana|k tātou.|a','eh too-hee-TOO-hee AH-nah TAH-toh-oo','tuhituhi = write. It is two small words said twice.','Mime writing. Tuhituhi means write. Say it with me. Take a moment… (wait 3 seconds)… E tuhituhi ana tātou. Say it with me.','Echo'],
           ['New word: karakia means prayer. How would you say: We are praying?','E|k karakia|n* ana|k tātou.|a','eh kah-RAH-kee-ah AH-nah TAH-toh-oo','karakia = pray, a prayer. Fold your hands.','Fold your hands. Karakia means pray or prayer. Say it with me. Take a moment… (wait 3 seconds)… E karakia ana tātou. Say it with me.','Echo'],
           ['Ask about the group: What are they doing? What are we doing?','E|k aha|q ana|k rātou?|a E|k aha|q ana|k tātou?|a','eh AH-hah AH-nah RAH-toh-oo · eh AH-hah AH-nah TAH-toh-oo','Swap the person, same question.',null,'Pairs'],
@@ -1122,5 +1130,473 @@
     addLessons({ '3.7.A': A, '3.7.B': B });
   }
 
+  /* ──────── WEEK 8 · Manaaki in action ──────── */
+  {
+    addGlossary({
+      "nau mai":["welcome (said to someone arriving)","NOW-my",8,3],
+      "manaaki":["care for / host / show hospitality","mah-NAH-kee",8,3],
+      "manuhiri":["guest / visitor","mah-noo-HEE-ree",8,3],
+      "hākari":["feast","HAH-kah-ree",8,3],
+      "anei":["here is / here are","AH-neh-ee",8,3],
+      "tēnā kōrua":["greetings to you (two people)","TEH-nah KOH-roo-ah",8,3],
+      "tuku":["give / offer","TOO-koo",8,3],
+      "noho mai":["sit down / come and sit with us","NOH-hoh MY",8,3]
+    });
+
+    // ── Lesson A · Nau mai! Haere mai ki te kai! — Welcome! Come to the food! ──
+    const A = {
+      P: {
+        t:3,
+        w:8,
+        l:'A',
+        ch:'Nau~mai!|w* Haere~mai|w ki~te|k kai!|n',
+        sub:'How do we welcome a guest? Today we learn to say welcome, here is the food, and to care for a visitor.',
+        say:'Kia ora everyone! This term our value is Manaaki: serving others with what we have. So far we have learned to talk about kai, about now, the past and the future, and about all the people. This week we put it all to work by caring for a guest, called a manuhiri. Today we learn how to welcome someone: Nau mai! Haere mai ki te kai! We also learn to say Anei te kai, here is the food, and E manaaki ana mātou i te manuhiri, we are caring for the guest. Still no writing: listen, think and speak. Open your arms wide when you say nau mai.',
+        pron:'nau mai = NOW-my · manuhiri = mah-noo-HEE-ree · manaaki = mah-NAH-kee · hākari = HAH-kah-ree · anei = AH-neh-ee · tēnā kōrua = TEH-nah KOH-roo-ah',
+        li:'welcome a guest and offer them food, using nau mai, haere mai, anei and tēnā koe, kōrua and koutou, in te reo.',
+        succ:['I can say the welcome: Nau mai! Haere mai ki te kai!','I can offer food to a guest: Anei te parāoa. Kei te pīrangi koe ki te parāoa?','I can say who I am caring for: E manaaki ana mātou i te manuhiri.'],
+        wp:'Share with God’s people who are in need. Practise hospitality.',
+        ref:'Romans 12:13',
+        mom:'To manaaki someone is to welcome them, make room for them and share what we have. We do not need to be grown up or rich to be a good host. A warm word and a seat at the table can make a visitor feel they belong.',
+        q:'Who could you welcome this week, and how will you show it?',
+        recall:[['How do you say: Do you want bread?','Kei te pīrangi koe ki te parāoa?'],['How do you say: You and I are eating.','E kai ana tāua.'],['How do you say: I am not hungry.','Kāore ahau i te hiakai.']],
+        rtag:'Term 3 Weeks 1, 6 and 7',
+        rtxt:'Remember when… Term 3 Weeks 1, 6 and 7 (3 quick prompts)',
+        refl:'Who did you welcome or care for today?',
+        next:'Lesson B: noho mai, tuku and hosting your guests from welcome to thank you',
+        vsay:'Say each word and the class echoes, with an action: open both arms wide for nau mai, sweep one arm towards the door for haere mai, hold out your hand as if giving a plate for anei, point at an imaginary visitor for manuhiri, spread your arms over a pretend table for hākari. Use one, two and three fingers for tēnā koe, tēnā kōrua and tēnā koutou. Say them slowly: nau mai, ma-nu-hi-ri, ma-naa-ki, hā-ka-ri.',
+        dsay:'One line per click. The actor reads aloud and the class echoes. Press T for English. In line 12 Kaiako Rose speaks in English to the audience.',
+        xlook:'Prompt 1: nau mai is welcome (said to someone arriving), haere mai is come here. Prompt 3: anei goes at the start, then te and the thing.',
+        xresc:'Common error: mixing up nau mai (welcome) and haere mai (come here), or using tēnā koe for two or more people. Say: tēnā koe is for one person, tēnā kōrua for two and tēnā koutou for three or more.',
+        xpron:'nau mai = NOW-my · manuhiri = mah-noo-HEE-ree · anei = AH-neh-ee · tēnā kōrua = TEH-nah KOH-roo-ah',
+        cur:cu3('Communication (welcoming a guest, offering food, answering politely, thanking) · Language Knowledge (Nau mai, Haere mai ki te kai; Anei te …; Tēnā koe / kōrua / koutou; He manuhiri koe; E manaaki ana mātou i te manuhiri) · Cultural Knowledge (manaakitanga: welcoming and caring for a manuhiri; hospitality as service to others)','Recycles Term 1 Weeks 1, 9 and 10 (Haere mai, Kia ora mō te kai), Term 2 Week 1 (He … tēnei) and Term 3 Weeks 1, 6 and 7. Check allergies and whānau food practices again: use picture cards, not real food. Please have a fluent speaker confirm E manaaki ana mātou i te manuhiri, He manuhiri koe, and the use of Anei.'),
+        vr:valueRows('Romans 12:13','To manaaki someone is to welcome them, make room for them and share what we have. A warm word and a seat at the table can make a visitor feel they belong.','Who could you welcome this week, and how will you show it?','Opening and closing karakia; Kaiako Rose’s English line in the drama; Soli Deo Gloria.',MV3),
+        prep:['Open the lesson slides and check the projector; press N for presenter notes.','Print the weekly vocab card, one per student.','Prepare picture cards of food (not real food) and a table or desks pushed together as the hākari table.','Choose three drama readers (Hana, Tama, Kaiako Rose) and rotate roles. Tama plays the manuhiri.','Practise the actions: open arms for nau mai, sweep your arm for haere mai, hold out your hand for anei.'],
+        three:'(1) <i>Nau mai</i> welcomes someone who is arriving. <i>Haere mai</i> invites them to come. Together: <i>Nau mai, haere mai ki te kai!</i> (2) <i>Anei</i> means here is. <i>Anei te parāoa</i> = here is the bread. (3) For greetings, use <i>tēnā koe</i> (one person), <i>tēnā kōrua</i> (two) and <i>tēnā koutou</i> (three or more).',
+        diff:['Echo as a whole class and use the actions for every word. Use only nau mai, haere mai and anei at first. Pair with a confident partner and allow whispering first.','Complete all steps. Use all ten words, host and guest in pairs, and answer politely.','Explain in English what manaaki means, choose the right tēnā word for one, two or three guests, and host a classmate from welcome to thank you.'],
+        look:'Nau mai said to someone arriving; the difference between nau mai and haere mai; anei before te and the food word; the right tēnā word for one, two or many; manuhiri and manaaki pronounced clearly; a warm, welcoming tone and open body language.',
+        nx:'revisit nau mai and anei with students in Starting; add noho mai, tuku and the three times in Lesson B.',
+        rec:'Term 1 Weeks 1, 9 and 10 (Kia ora, Haere mai, Kia ora mō te kai, Ka pai, Ka rawe), Term 2 Week 1 (He … tēnei), and Term 3 Weeks 1, 6 and 7 (Kei te pīrangi koe ki te parāoa?, Kāore ahau i te hiakai, E kai ana tāua) are recalled in the warm-up, steps and drama. Lesson B adds noho mai and tuku.'
+      },
+      D: {
+        VOC:['nau mai','haere mai','anei','manuhiri','manaaki','hākari','tēnā koe','tēnā kōrua','tēnā koutou','kai'],
+        STEPS:[
+          ['Quick recap: Do you want bread? Yes, I want bread.','Kei~te|k pīrangi|n koe|a ki~te|k parāoa?|n Āe,|w kei~te|k pīrangi|n ahau.|a','kay teh PEE-rah-ngee KOH-eh kee teh pah-RAH-or-ah · AH-eh, kay teh PEE-rah-ngee ah-HOW','Term 3 Week 1: offering and answering.',null,'Whole class'],
+          ['Quick recap: Come to the food! Thank you for the food.','Haere~mai|w ki~te|k kai!|n Kia~ora~mō~te~kai.|w','HIGH-reh MY kee teh KYE · KEE-ah OR-ah mor teh KYE','Term 1: we already say haere mai and thank you for the food.','Sweep your arm towards the table for haere mai. You know these already. Say each one with me.','Gesture'],
+          ['New welcome for someone arriving. How would you say: Welcome!','Nau~mai!|w*','NOW-my','Nau mai = welcome. We say it to someone who is arriving.','Open your arms as if a visitor is arriving. Nau mai means welcome, and we say it to someone who is coming towards us. Take a moment… (wait 3 seconds)… Nau mai! Say it with me.','Echo'],
+          ['Put them together: Welcome! Come to the food!','Nau~mai!|w Haere~mai|w ki~te|k kai!|n','NOW-my! HIGH-reh MY kee teh KYE','Nau mai, haere mai: welcome, come in.','Open your arms for nau mai and sweep one arm towards the table for haere mai. Take a moment… (wait 3 seconds)… Nau mai! Haere mai ki te kai! Say it with me.','Echo'],
+          ['Greetings by number. How would you say hello to one person? To two people? To three or more?','Tēnā~koe.|w Tēnā~kōrua.|w* Tēnā~koutou.|w','TEH-nah KOH-eh · TEH-nah KOH-roo-ah · TEH-nah KOH-toh','Tēnā + the people word: koe (one), kōrua (two), koutou (three or more).','Last week’s people words are back. Hold up one finger for Tēnā koe, two fingers for Tēnā kōrua and three fingers for Tēnā koutou. Say each one with me.','Gesture'],
+          ['New word: manuhiri means guest. How would you say: You are a guest.','He|k manuhiri|n* koe.|a','heh mah-noo-HEE-ree KOH-eh','He + the thing + the person (Term 2). manuhiri = guest or visitor.','Point at an imaginary visitor at the door. Manuhiri means guest or visitor. Take a moment… (wait 3 seconds)… He manuhiri koe. Say it with me.','Echo'],
+          ['New word: anei means here is. How would you say: Here is the food.','Anei|k* te|k kai.|n','AH-neh-ee teh KYE','Anei = here is or here are. Hold out the thing as you say it.','Hold out a picture card, as if you are giving it. Anei means here is. Take a moment… (wait 3 seconds)… Anei te kai. Say it with me.','Echo'],
+          ['Swap the food: Here is the bread. Here is the apple. Here is the banana.','Anei|k te|k parāoa.|n Anei|k te|k āporo.|n Anei|k te|k panana.|n','AH-neh-ee teh pah-RAH-or-ah · AH-neh-ee teh AH-poh-roh · AH-neh-ee teh pah-NAH-nah','Swap the thing after te.',null,'Whole class'],
+          ['Partner game: you are the host and your partner is the guest. Welcome them, offer food, and they answer. Then swap.','Nau~mai!|w Anei|k te|k ___.|n Kei~te|k pīrangi|n koe|a ki~te|k ___?|n','NOW-my! AH-neh-ee teh ___ · kay teh PEE-rah-ngee KOH-eh kee teh ___','Swap in any food word. The guest answers Āe, kia ora or Kāo, kia ora.','Turn to your partner. One of you is the host and one is the guest. The host says Nau mai! Anei te … and asks Kei te pīrangi koe ki te …? The guest answers politely. We use picture cards, not real food. Swap after three. Take 2 minutes while I listen.','Pairs'],
+          ['New word: manaaki means to care for. How would you say: We are caring for the guest. (We do not include the guest.)','E|k manaaki|n* ana|k mātou|a i~te|k manuhiri.|n','eh mah-NAH-kee AH-nah MAH-toh ee teh mah-noo-HEE-ree','E … ana + manaaki + who is hosting + i te + who is cared for.','Manaaki means to look after someone and to host them well. The guest is outside our group, so we say mātou. Take a moment… (wait 3 seconds)… E manaaki ana mātou i te manuhiri. Say it with me.','Echo'],
+          ['New word: hākari means feast. How would you say: This is a feast!','He|k hākari|n* tēnei!|x','heh HAH-kah-ree TEH-neh-ee','Term 2 pattern He … tēnei, with hākari = a big shared meal.','A hākari is a big shared meal. Spread your arms over a pretend table and say it with joy. Take a moment… (wait 3 seconds)… He hākari tēnei! Say it with me.','Echo'],
+          ['Put it together: Welcome! Come to the food! Here is the bread. Do you want bread? Yes, thank you for the food.','Nau~mai!|w Haere~mai|w ki~te|k kai!|n Anei|k te|k parāoa.|n Kei~te|k pīrangi|n koe|a ki~te|k parāoa?|n Āe,|w kia~ora~mō~te~kai.|w','NOW-my! HIGH-reh MY kee teh KYE. AH-neh-ee teh pah-RAH-or-ah. kay teh PEE-rah-ngee KOH-eh kee teh pah-RAH-or-ah? AH-eh, KEE-ah OR-ah mor teh KYE','Terms 1 and 3 together.',null,'Whole class'],
+          ['Class chain: welcome the next person, hold out a food card, and they say thank you. Then they welcome the next person.','Nau~mai!|w Anei|k te|k ___.|n Kia~ora.|w','NOW-my! AH-neh-ee teh ___ · KEE-ah OR-ah','Real hosting, nothing memorised.','Pass it around the circle. Each person welcomes the next one and holds out a picture card: Nau mai! Anei te … The next person says Kia ora, then welcomes the person after them. If you stumble, that’s my fault, not yours.','Individual']],
+        DR:{title:'Te Hākari — The Feast',cast:CAST_TAMA_KAIAKO,lines:[
+          ['Kaiako Rose','Kia ora, tamariki! He hākari tēnei!','Hello, children! This is a feast!','(spreads her arms over the table)','T1W1'],
+          ['Hana','Ka rawe, Kaiako!','Awesome, teacher!','(claps her hands)','T1W10'],
+          ['Kaiako Rose','Tama, he manuhiri koe. Nau mai!','Tama, you are a guest. Welcome!','(opens her arms to him)'],
+          ['Tama','Tēnā koe, Kaiako.','Greetings, teacher.','(bows his head)','T1W10'],
+          ['Kaiako Rose','Haere mai ki te kai! Anei te parāoa.','Come to the food! Here is the bread.','(holds out the picture card)'],
+          ['Hana','Kei te pīrangi koe ki te parāoa, Tama?','Do you want bread, Tama?','(passes the card)','T3W1'],
+          ['Tama','Āe, kia ora, Hana! Kei te hiakai au.','Yes, thank you, Hana! I am hungry.','(rubs his tummy)','T3W7'],
+          ['Kaiako Rose','E manaaki ana mātou i te manuhiri.','We are caring for the guest.','(sweeps her arm around the class)'],
+          ['Hana','E kai ana tāua, Tama!','You and I are eating, Tama!','(sits beside him)','T3W7'],
+          ['Tama','Kia ora mō te kai, Kaiako.','Thank you for the food, teacher.','(hands together)','T1W9'],
+          ['Hana','Nau mai, nau mai, Tama!','Welcome, welcome, Tama!','(waves)'],
+          ['Kaiako Rose','E aroha ana te Atua ki a koutou.','God loves all of you.','(to the audience, in English) When we welcome someone, make room for them and share what we have, we are showing manaaki. You do not need to be grown up to be a good host. Anyone can do it.','T1W9'],
+          ['Tama','Kia ora, Kaiako. Ka kite!','Thank you, teacher. See you!','(Hana waves too)','T1W9']]},
+        EX:[['Say in te reo: ‘Welcome! Come to the food!’','Nau mai! Haere mai ki te kai!'],['What does manuhiri mean?','Guest / visitor.'],['Choose the word: ____ te kai! (Here is the food!) (Anei / Nau mai)','Anei'],['Say in te reo: ‘Greetings to you two.’','Tēnā kōrua.'],['Stretch: say ‘Here is the bread.’ then ask your partner ‘Do you want bread?’','Anei te parāoa. Kei te pīrangi koe ki te parāoa?']],
+        CE:['Mixing up nau mai (welcome, said to someone arriving) and haere mai (come here)','Not knowing that manuhiri means a guest or visitor','Mixing up anei (here is) with kei hea (where is)','Using tēnā koe for two people instead of tēnā kōrua','Leaving out ki te before the food word in Kei te pīrangi koe ki te parāoa?'],
+        T:'T3 W8 Lesson A',
+        LP:{title:'Nau mai! Haere mai ki te kai! — Welcome! Come to the food!',val:'Manaaki · Romans 12:13',pat:['Nau mai! Haere mai ki te ________.','Anei te ________. Kei te pīrangi koe ki te ________?','Tēnā koe · Tēnā kōrua · Tēnā ________.'],swap:'Greetings: tēnā koe (one) · tēnā kōrua (two) · tēnā koutou (three or more). Food: parāoa · āporo · panana · mīti · rare. Words: manuhiri (guest) · manaaki (care for) · hākari (feast).'}
+      }
+    };
+
+    // ── Lesson B · Noho mai, anei te kai — Sit down, here is the food ──
+    const B = {
+      P: {
+        t:3,
+        w:8,
+        l:'B',
+        ch:'Noho~mai!|w* Anei|k te|k kai.|n',
+        sub:'How do we host a guest from welcome to thank you? Today we add noho mai and tuku, and use all three times to talk about caring for guests.',
+        say:'Kia ora everyone! Last lesson we learned how to welcome a guest: Nau mai! Haere mai ki te kai! Anei te kai. Today we are good hosts from the moment the guest arrives until they go home. We add two new words: noho mai, which means sit down, come and sit with us, and tuku, which means to give or offer. We also use the three times with manaaki: I manaaki mātou inanahi, E manaaki ana mātou ināianei, Ka manaaki mātou āpōpō. And we remember that a good host listens when a guest says no thank you. Still no writing: listen, think and speak.',
+        pron:'noho mai = NOH-hoh MY · tuku = TOO-koo · manaaki = mah-NAH-kee · manuhiri = mah-noo-HEE-ree · anei = AH-neh-ee · inanahi = ee-NAH-nah-hee',
+        li:'host a guest from welcome to thank you, using noho mai, tuku and manaaki with the three times, in te reo.',
+        succ:['I can welcome and seat a guest: Tēnā koe. Nau mai. Noho mai. Anei te kai.','I can offer food and take a polite no: Kei te pīrangi koutou ki te mīti? Kāo, kia ora.','I can say I care for guests in the past, now and future: I manaaki mātou … E manaaki ana mātou … Ka manaaki mātou …'],
+        wp:'I was a stranger and you invited me in.',
+        ref:'Matthew 25:35',
+        mom:'When we welcome a stranger or a visitor, we do what Jesus asked us to do. Being a good host is not only about food. It is about making someone feel safe, wanted and part of the group. A good host also listens when someone says no thank you.',
+        q:'Who could feel like a stranger at school or at church this week, and how could you welcome them?',
+        recall:[['How do you say: Welcome! (to someone arriving)','Nau mai!'],['How do you say: Greetings to you two.','Tēnā kōrua.'],['How do you say: I will play tomorrow.','Ka tākaro ahau āpōpō.'],['How do you say: They are not hungry.','Kāore rātou i te hiakai.']],
+        rtag:'Lesson A and earlier',
+        rtxt:'Remember when… Lesson A and earlier (4 quick prompts)',
+        refl:'Who did you make room for today?',
+        next:'Week 9: Serving others (Ka āwhina ahau)',
+        vsay:'Same vocab card as Lesson A, with two stretch words today: noho mai (sit down, come and sit with us) and tuku (give, offer). Pat the chair beside you for noho mai. Hold out a plate and move it forward for tuku. Noho mai = NOH-hoh MY. Tuku = TOO-koo.',
+        dsay:'One line per click. The actor reads aloud and the class echoes. Press T for English. In line 12 Kuia Mere speaks in English to the audience.',
+        xlook:'Prompt 1: noho mai, then anei te kai. Prompt 4: E manaaki ana mātou i te manuhiri, with the right people word.',
+        xresc:'Common error: mixing up the three times (I, E … ana, Ka) or using tēnā koe for three or more people. Say: I is finished, E … ana is happening now, Ka is still to come; tēnā koutou is for three or more.',
+        xpron:'noho mai = NOH-hoh MY · tuku = TOO-koo · manaaki = mah-NAH-kee',
+        cur:cu3('Communication (hosting a guest from welcome to thank you, offering, accepting a polite no, talking about caring for guests at different times) · Language Knowledge (Noho mai; Ka tuku ahau i te …; I / E … ana / Ka manaaki mātou i te manuhiri; Kāo, kia ora, kāore … i te hiakai) · Cultural Knowledge (manaakitanga in the home: seating, feeding and thanking; a good host listens to a polite no)','Recycles Lesson A, Term 1 Weeks 1, 9 and 10, and Term 3 Weeks 1 to 7. Check allergies and whānau food practices: use picture cards, not real food. Please have a fluent speaker confirm Ka tuku ahau i te parāoa, noho mai, the three times with manaaki, and E whakawhetai ana mātou mō te kai.'),
+        vr:valueRows('Matthew 25:35','When we welcome a stranger or a visitor, we do what Jesus asked us to do. Being a good host is about making someone feel safe, wanted and part of the group.','Who could feel like a stranger at school or at church this week, and how could you welcome them?','Opening and closing karakia; Kuia Mere’s English line in the drama; Soli Deo Gloria.',MV3),
+        prep:['Open the lesson slides and check the projector; press N for presenter notes.','Use the same vocab card as Lesson A. Add noho mai and tuku as the two stretch words, written or spoken.','Set up a table with chairs and picture cards of food (not real food).','Choose three drama readers (Hana, Tama, Kuia Mere) and rotate roles.','Practise the actions: pat the chair for noho mai and hold out a plate for tuku.'],
+        three:'(1) <i>Noho mai</i> invites a guest to sit. <i>Anei te kai</i> offers the food. (2) <i>Ka tuku ahau i te parāoa</i> means I will offer or give the bread. (3) The three times work with <i>manaaki</i>: <i>I manaaki mātou i te manuhiri inanahi</i>, <i>E manaaki ana mātou i te manuhiri ināianei</i>, <i>Ka manaaki mātou i te manuhiri āpōpō</i>.',
+        diff:['Echo as a whole class and use the actions for every word. Use only nau mai, noho mai and anei at first. Pair with a confident partner and allow whispering first.','Complete all steps. Host and guest in pairs, from welcome to thank you, with a polite no in one of the turns.','Add noho mai and tuku. Explain in English what a good host does, host two or three classmates at once, and say what you did for a guest in the past, now and future.'],
+        look:'Noho mai said warmly with an inviting action; anei and the food word; tuku with Ka; the right tēnā word for the number of guests; the right time marker with manaaki; a kind response to a polite no; a welcoming tone.',
+        nx:'revisit the welcome and the three times with students in Starting; move to Week 9 (Serving others).',
+        rec:'Lesson A (Nau mai, Haere mai, Anei, Tēnā koe, kōrua, koutou, manuhiri, manaaki), Term 1 Weeks 1, 9 and 10 (Kia ora mō te kai, Ka kite), Term 3 Weeks 1, 2, 4, 6 and 7 (Kei te pīrangi koutou ki te mīti?, E kai ana tātou, Ka tākaro ahau āpōpō, Kāore rātou i te hiakai, tāua) are recalled in the warm-up, steps and drama. Week 9 will recall hosting when we serve others.'
+      },
+      D: {
+        VOC:[...A.D.VOC,'tuku','noho mai'],
+        STEPS:[
+          ['Quick recap: Welcome! Come to the food! Here is the food.','Nau~mai!|w Haere~mai|w ki~te|k kai!|n Anei|k te|k kai.|n','NOW-my! HIGH-reh MY kee teh KYE. AH-neh-ee teh KYE','Lesson A: welcoming and offering.',null,'Whole class'],
+          ['Quick recap: greetings to one person, to two people, to three or more.','Tēnā~koe.|w Tēnā~kōrua.|w Tēnā~koutou.|w','TEH-nah KOH-eh · TEH-nah KOH-roo-ah · TEH-nah KOH-toh','Tēnā + koe, kōrua or koutou.','Hold up one, two and three fingers. You know these already. Say each one with me.','Gesture'],
+          ['New word: noho mai means sit down, come and sit with us. How would you say: Sit down!','Noho~mai!|w*','NOH-hoh MY','noho = sit or stay. mai = towards me. We say it to a guest.','Pat the chair beside you. Noho mai means come and sit with us. Take a moment… (wait 3 seconds)… Noho mai! Say it with me.','Echo'],
+          ['Welcome your guests: Greetings to you all. Welcome. Sit down. Here is the food.','Tēnā~koutou.|w Nau~mai.|w Noho~mai.|w Anei|k te|k kai.|n','TEH-nah KOH-toh. NOW-my. NOH-hoh MY. AH-neh-ee teh KYE','Greet, welcome, seat, offer.',null,'Whole class'],
+          ['New word: tuku means to give or offer. How would you say: I will offer the bread.','Ka|k tuku|n* ahau|a i~te|k parāoa.|n','kah TOO-koo ah-HOW ee teh pah-RAH-or-ah','Ka (Week 4) + tuku + who + i te + the thing.','Hold out an imaginary plate and move it forward. Tuku means to give or offer. Take a moment… (wait 3 seconds)… Ka tuku ahau i te parāoa. Say it with me.','Echo'],
+          ['Swap the people: We will offer the bread. You two will offer the apple.','Ka|k tuku|n mātou|a i~te|k parāoa.|n Ka|k tuku|n kōrua|a i~te|k āporo.|n','kah TOO-koo MAH-toh ee teh pah-RAH-or-ah · kah TOO-koo KOH-roo-ah ee teh AH-poh-roh','Swap the people word after tuku.',null,'Whole class'],
+          ['Partner game: you are the host and your partner is the guest. Greet, welcome, seat and offer. Then swap.','Tēnā~koe.|w Nau~mai.|w Noho~mai.|w Anei|k te|k ___.|n Kei~te|k pīrangi|n koe|a ki~te|k ___?|n','TEH-nah KOH-eh. NOW-my. NOH-hoh MY. AH-neh-ee teh ___. kay teh PEE-rah-ngee KOH-eh kee teh ___','Use any food word. The guest answers Āe, kia ora or Kāo, kia ora.','Turn to your partner. One of you is the host and one is the guest. The host greets, welcomes, seats and offers a picture card. The guest answers politely. Swap after three. Take 2 minutes while I listen.','Pairs'],
+          ['Ask your guests and accept a polite no: Do you all want meat? No thank you. We are not hungry.','Kei~te|k pīrangi|n koutou|a ki~te|k mīti?|n Kāo,|w kia~ora.|w Kāore|k mātou|a i~te|k hiakai.|q','kay teh PEE-rah-ngee KOH-toh kee teh MEE-tee? KAH-or, KEE-ah OR-ah. KAH-or-eh MAH-toh ee teh HEE-ah-kye','Week 6: a good host listens to a polite no.','A good host listens and does not push when someone says no thank you. Kāo, kia ora. Kāore mātou i te hiakai. That is manaaki too. Say it with me.','Whole class'],
+          ['The three times: We cared for the guests yesterday. We are caring for the guests now. We will care for the guests tomorrow.','I|k manaaki|n mātou|a i~te|k manuhiri|n inanahi.|q E|k manaaki|n ana|k mātou|a i~te|k manuhiri|n ināianei.|q Ka|k manaaki|n mātou|a i~te|k manuhiri|n āpōpō.|q','ee mah-NAH-kee MAH-toh ee teh mah-noo-HEE-ree ee-NAH-nah-hee · eh mah-NAH-kee AH-nah MAH-toh ee teh mah-noo-HEE-ree ee-NAH-ee-ah-nay · kah mah-NAH-kee MAH-toh ee teh mah-noo-HEE-ree AH-por-por','I = finished, E … ana = now, Ka = still to come.','Point behind you for I, at the floor for E … ana and ahead for Ka. Say each sentence with me and move your hand to match.','Gesture'],
+          ['With the people words: You and I are caring for the guests. They two are caring for the guests. You all are caring for the guests.','E|k manaaki|n ana|k tāua.|a E|k manaaki|n ana|k rāua.|a E|k manaaki|n ana|k koutou.|a','eh mah-NAH-kee AH-nah TAH-oo-ah · eh mah-NAH-kee AH-nah RAH-oo-ah · eh mah-NAH-kee AH-nah KOH-toh','Week 7: the people word goes after ana.',null,'Whole class'],
+          ['Giving thanks: We give thanks for the food. Thank you for the food.','E|k whakawhetai|n ana|k mātou|a mō~te~kai.|n Kia~ora~mō~te~kai.|w','eh fah-kah-FEH-tye AH-nah MAH-toh mor teh KYE · KEE-ah OR-ah mor teh KYE','Our karakia says mātou: a good host and a good guest both give thanks.','Say this one with thankful hands, palms together. E whakawhetai ana mātou mō te kai. Kia ora mō te kai. Say it with me.','Echo'],
+          ['Put it together: Greetings to you all. Welcome. Sit down. Here is the food. Do you all want bread? Yes, thank you for the food.','Tēnā~koutou.|w Nau~mai.|w Noho~mai.|w Anei|k te|k kai.|n Kei~te|k pīrangi|n koutou|a ki~te|k parāoa?|n Āe,|w kia~ora~mō~te~kai.|w','TEH-nah KOH-toh. NOW-my. NOH-hoh MY. AH-neh-ee teh KYE. kay teh PEE-rah-ngee KOH-toh kee teh pah-RAH-or-ah? AH-eh, KEE-ah OR-ah mor teh KYE','Terms 1 and 3 together.',null,'Whole class'],
+          ['Class chain: greet the next person, welcome them, offer them food, and say goodbye.','Tēnā~koe.|w Nau~mai.|w Anei|k te|k ___.|n Ka~kite!|w','TEH-nah KOH-eh. NOW-my. AH-neh-ee teh ___. kah KEE-teh','Real hosting, nothing memorised.','Pass it around the circle. Each person greets the next, welcomes them and holds out a picture card. The next person says Kia ora and does the same for the person after them. If you stumble, that’s my fault, not yours.','Individual']],
+        DR:{title:'Te Tēpu a Kuia — Kuia’s Table',cast:CAST_TAMA_KUIA,lines:[
+          ['Kuia Mere','Kia ora, tamariki! Nau mai, haere mai!','Hello, children! Welcome, come in!','(opens the door)','T1W1'],
+          ['Hana','Tēnā koe, Kuia. Kei te hiakai māua.','Greetings, Kuia. We two are hungry.','(points at herself and Tama)','T3W7'],
+          ['Kuia Mere','Noho mai! Anei te kai.','Sit down! Here is the food.','(pats the chairs and holds out a plate)'],
+          ['Tama','Kia ora, Kuia! He hākari tēnei!','Thank you, Kuia! This is a feast!','(spreads his arms)'],
+          ['Kuia Mere','Kei te pīrangi koutou ki te mīti?','Do you both want meat?','(holds up the picture card)','T3W1'],
+          ['Hana','Āe, kia ora, Kuia.','Yes, thank you, Kuia.','(takes a piece)','T3W1'],
+          ['Tama','Ka tuku ahau i te parāoa.','I will offer the bread.','(passes the plate to Kuia)'],
+          ['Kuia Mere','Kia ora, Tama! Ka pai!','Thank you, Tama! Well done!','(smiles)','T1W10'],
+          ['Hana','Kāo, kia ora. Kāore ahau i te pīrangi ki te rare.','No thank you. I do not want lollies.','(shakes her head kindly)','T3W6'],
+          ['Kuia Mere','E kai ana tātou ināianei!','We are all eating now!','(sits down with them)','T3W2'],
+          ['Tama','Ka manaaki tātou i te manuhiri āpōpō, Kuia!','We will care for the guests tomorrow, Kuia!','(nods)','T3W4'],
+          ['Kuia Mere','E aroha ana te Atua ki a koutou.','God loves all of you.','(to the audience, in English) When we welcome someone, give them a seat and share our food, we are showing God’s welcome. Jesus said that when we welcome a stranger, we welcome him. That is manaaki.','T1W9'],
+          ['Tama','Kia ora mō te kai, Kuia. Ka kite!','Thank you for the food, Kuia. See you!','(Hana waves too)','T1W9']]},
+        EX:[['Say in te reo: ‘Sit down. Here is the food.’','Noho mai. Anei te kai.'],['What does tuku mean?','Give / offer.'],['Choose the word: ____ (Greetings to you all.) (Tēnā koe / Tēnā koutou)','Tēnā koutou'],['Say in te reo: ‘We are caring for the guests.’','E manaaki ana mātou i te manuhiri.'],['Stretch: say ‘I will offer the bread.’ then ask your partner ‘Do you want bread?’','Ka tuku ahau i te parāoa. Kei te pīrangi koe ki te parāoa?']],
+        CE:['Using nau mai for sit down, or leaving out mai in noho mai','Not knowing that tuku means to give or offer','Using tēnā koe for three or more people instead of tēnā koutou','Putting the people word before ana, or leaving out i te before the guests','Leaving out Ka before tuku, or putting the person before the action'],
+        T:'T3 W8 Lesson B',
+        LP:{title:'Noho mai, anei te kai — Sit down, here is the food',val:'Manaaki · Matthew 25:35',pat:['Tēnā koe. Nau mai. Noho mai.','Anei te ________. Ka tuku ahau i te ________.','I / E … ana / Ka manaaki mātou i te manuhiri.'],swap:'Greetings: tēnā koe · tēnā kōrua · tēnā koutou. Times: I … inanahi · E … ana ināianei · Ka … āpōpō. Words: noho mai (sit down) · tuku (give, offer) · manaaki · manuhiri · hākari.'}
+      }
+    };
+
+    addLessons({ '3.8.A': A, '3.8.B': B });
+  }
+
+  /* ──────── WEEK 9 · Serving others ──────── */
+  {
+    addGlossary({
+      "āwhina":["help / assist","AH-fee-nah",9,3],
+      "hapai":["lift / carry","HAH-pie",9,3],
+      "tautoko":["support / back up","TOW-toh-koh",9,3]
+    });
+
+    // ── Lesson A · Ka āwhina ahau — I will help ──
+    const A = {
+      P: {
+        t:3,
+        w:9,
+        l:'A',
+        ch:'Ka|k āwhina|n* ahau.|a',
+        sub:'How do we serve others? Today we learn to say I will help, ask Do you want to help? and look after things.',
+        say:'Kia ora everyone! Last week we learned to welcome and care for a guest. This week we learn to serve: to help, to look after, to do our share of the work. Our value this term is Manaaki: serving faithfully with our gifts and talents. Today we learn one new word, āwhina, which means to help. We use it with Ka, the word you know for the future: Ka āwhina ahau, I will help. We also ask Kei te pīrangi koe ki te āwhina? and answer Āe, ka āwhina ahau. Still no writing: listen, think and speak. Put your hand out as if you are helping someone up.',
+        pron:'āwhina = AH-fee-nah · tiaki = TEE-ah-kee · mahi = MAH-hee · tuku = TOO-koo · manaaki = mah-NAH-kee · hoa = HOR-ah',
+        li:'say that we will help, ask someone if they want to help, and talk about looking after things, using āwhina and tiaki, in te reo.',
+        succ:['I can say I will help: Ka āwhina ahau. Ka āwhina tātou.','I can ask and answer: Kei te pīrangi koe ki te āwhina? Āe, ka āwhina ahau.','I can say who I will help and what I will look after: Ka āwhina ahau i tōku hoa. Ka tiaki ahau i ngā pukapuka.'],
+        wp:'Each of you should use the gift you have received to serve others.',
+        ref:'1 Peter 4:10',
+        mom:'God has given every one of us gifts and talents, and none of them is too small to use. When we use what we have to help someone else, we are serving. This is the heart of Manaaki.',
+        q:'What is one thing you are good at that you could use to help someone this week?',
+        recall:[['How do you say: Welcome! Come to the food!','Nau mai! Haere mai ki te kai!'],['How do you say: Here is the bread.','Anei te parāoa.'],['How do you say: You and I will play tomorrow.','Ka tākaro tāua āpōpō.']],
+        rtag:'Term 3 Weeks 4, 7 and 8',
+        rtxt:'Remember when… Term 3 Weeks 4, 7 and 8 (3 quick prompts)',
+        refl:'How did you serve someone today?',
+        next:'Lesson B: hapai, tautoko and helping in the past, now and future',
+        vsay:'Say each word and the class echoes, with an action: hold out a helping hand for āwhina, cradle something in your arms for tiaki, mime sweeping or stacking for mahi, hold out a plate for tuku, open both arms for manaaki. Say them slowly: ā-whi-na, ti-a-ki, ma-hi.',
+        dsay:'One line per click. The actor reads aloud and the class echoes. Press T for English. In line 12 Kaiako Rose speaks in English to the audience.',
+        xlook:'Prompt 1: Ka goes first, then āwhina, then the person. Prompt 3: Ka for the future, not E … ana.',
+        xresc:'Common error: leaving out Ka, or putting the person before āwhina. Say: Ka comes first, then the action, then who is doing it.',
+        xpron:'āwhina = AH-fee-nah · tiaki = TEE-ah-kee · hoa = HOR-ah',
+        cur:cu3('Communication (offering to help, asking and answering about helping, saying what we will look after) · Language Knowledge (Ka + action + person; Kei te pīrangi koe ki te āwhina?; Ka āwhina ahau i tōku hoa / i te kaiako; Ka tiaki ahau i …) · Cultural Knowledge (serving others with our gifts and talents; many hands make light work)','Recycles Term 2 Week 7 (tōku), Term 3 Weeks 1, 4, 7 and 8. Please have a fluent speaker confirm Kei te pīrangi koe ki te āwhina? (do you want to help?) and the use of i te / i tōku after āwhina.'),
+        vr:valueRows('1 Peter 4:10','God has given every one of us gifts and talents, and none is too small to use. When we use what we have to help someone else, we are serving. This is the heart of Manaaki.','What is one thing you are good at that you could use to help someone this week?','Opening and closing karakia; Kaiako Rose’s English line in the drama; Soli Deo Gloria.',MV3),
+        prep:['Open the lesson slides and check the projector; press N for presenter notes.','Print the weekly vocab card, one per student.','Collect a few classroom props to look after: books, a cup, a chair (not food).','Choose three drama readers (Hana, Tama, Kaiako Rose) and rotate roles.','Practise the actions: a helping hand for āwhina, cradling arms for tiaki.'],
+        three:'(1) <i>Ka</i> + action + person is the future: <i>Ka āwhina ahau</i> = I will help. (2) To ask: <i>Kei te pīrangi koe ki te āwhina?</i> To answer: <i>Āe, ka āwhina ahau.</i> (3) Who we help comes after <i>i</i>: <i>Ka āwhina ahau i tōku hoa</i> = I will help my friend.',
+        diff:['Echo as a whole class and use the actions for every word. Use only Ka āwhina ahau and Ka āwhina tātou at first. Pair with a confident partner and allow whispering first.','Complete all steps. Ask and answer in pairs and say who you will help.','Explain in English what serving means, say who you will help and what you will look after, and quiz a classmate.'],
+        look:'Ka at the start; āwhina pronounced AH-fee-nah; the person after the action; the question Kei te pīrangi koe ki te āwhina?; a willing, cheerful tone.',
+        nx:'revisit Ka āwhina ahau with students in Starting; add hapai, tautoko and the three times in Lesson B.',
+        rec:'Term 2 Week 7 (tōku hoa), Term 3 Weeks 1, 4, 7 and 8 (Kei te pīrangi koe ki te …?, Ka … āpōpō, tāua, Nau mai, Anei te …) are recalled in the warm-up, steps and drama. Lesson B adds hapai and tautoko.'
+      },
+      D: {
+        VOC:['āwhina','tiaki','mahi','tuku','manaaki','hoa','kaiako','pukapuka','kapu','kura'],
+        STEPS:[
+          ['Quick recap: Welcome! Here is the food.','Nau~mai!|w Anei|k te|k kai.|n','NOW-my! AH-neh-ee teh KYE','Term 3 Week 8: welcoming and offering.',null,'Whole class'],
+          ['Quick recap: You and I will play tomorrow. They will go home tomorrow.','Ka|k tākaro|n tāua|a āpōpō.|q Ka|k haere|n rātou|a ki~te|k kāinga|n āpōpō.|q','kah TAH-kah-roh TAH-oo-ah AH-por-por · kah HIGH-reh RAH-toh kee teh KAH-ee-ngah AH-por-por','Term 3 Week 4: Ka is for the future.','Point ahead of you for the future. You know these already. Say each one with me.','Gesture'],
+          ['New word: āwhina means to help. How would you say: I will help.','Ka|k āwhina|n* ahau.|a','kah AH-fee-nah ah-HOW','Ka (future) + āwhina + the person.','Put your hand out as if helping someone up. Āwhina means to help. Take a moment… (wait 3 seconds)… Ka āwhina ahau. Say it with me.','Echo'],
+          ['Swap the people: You will help. She will help. We all will help.','Ka|k āwhina|n koe.|a Ka|k āwhina|n ia.|a Ka|k āwhina|n tātou.|a','kah AH-fee-nah KOH-eh · kah AH-fee-nah EE-ah · kah AH-fee-nah TAH-toh','The person goes after the action.',null,'Whole class'],
+          ['Who we help: I will help the teacher.','Ka|k āwhina|n ahau|a i~te|k kaiako.|n','kah AH-fee-nah ah-HOW ee teh KYE-ah-kor','i te + who or what we help.','Point at the teacher. The person we help comes after i te. Take a moment… (wait 3 seconds)… Ka āwhina ahau i te kaiako. Say it with me.','Echo'],
+          ['Swap who you help: I will help my friend.','Ka|k āwhina|n ahau|a i~tōku|k hoa.|n','kah AH-fee-nah ah-HOW ee TOH-koo HOR-ah','tōku (Term 2) after i: i tōku hoa.',null,'Whole class'],
+          ['Ask someone: Do you want to help?','Kei~te|k pīrangi|n koe|a ki~te|k āwhina?|n','kay teh PEE-rah-ngee KOH-eh kee teh AH-fee-nah','Kei te pīrangi koe ki te … (Term 3 Week 1) with āwhina.','Hold out your hand with a smile. You know Kei te pīrangi koe ki te … from the food lessons. Now we ask about helping. Take a moment… (wait 3 seconds)… Kei te pīrangi koe ki te āwhina? Say it with me.','Echo'],
+          ['Answer: Yes, I will help.','Āe,|w ka|k āwhina|n ahau.|a','AH-eh, kah AH-fee-nah ah-HOW','Answer with Āe and then Ka āwhina ahau.',null,'Whole class'],
+          ['Partner game: ask your partner if they want to help. They answer and say who they will help. Then swap.','Kei~te|k pīrangi|n koe|a ki~te|k āwhina?|n Āe,|w ka|k āwhina|n ahau|a i~te|k ___.|n','kay teh PEE-rah-ngee KOH-eh kee teh AH-fee-nah? AH-eh, kah AH-fee-nah ah-HOW ee teh ___','Use kaiako, hoa (tōku hoa) or another person. Swap after three.','Turn to your partner. One person asks Kei te pīrangi koe ki te āwhina? The other answers Āe, ka āwhina ahau i te … Swap after three. Take 2 minutes while I listen.','Pairs'],
+          ['Look after things: I will look after the books.','Ka|k tiaki|n ahau|a i~ngā|k pukapuka.|n','kah TEE-ah-kee ah-HOW ee NGAH POO-kah-POO-kah','tiaki = look after (Term 2). i ngā for more than one thing.','Cradle an imaginary book in your arms. Tiaki means to look after. Take a moment… (wait 3 seconds)… Ka tiaki ahau i ngā pukapuka. Say it with me.','Echo'],
+          ['Now: We are working. I am helping.','E|k mahi|n ana|k tātou.|a E|k āwhina|n ana|k ahau.|a','eh MAH-hee AH-nah TAH-toh · eh AH-fee-nah AH-nah ah-HOW','E … ana (Term 3 Week 2) is for now.',null,'Whole class'],
+          ['Put it together: Hello. Do you want to help? Yes, I will help. Well done!','Kia~ora.|w Kei~te|k pīrangi|n koe|a ki~te|k āwhina?|n Āe,|w ka|k āwhina|n ahau.|a Ka~pai!|w','KEE-ah OR-ah. kay teh PEE-rah-ngee KOH-eh kee teh AH-fee-nah? AH-eh, kah AH-fee-nah ah-HOW. kah PIE','Terms 1 and 3 together.',null,'Whole class'],
+          ['Class chain: ask the next person if they want to help, they answer, say goodbye.','Kia~ora.|w Kei~te|k pīrangi|n koe|a ki~te|k āwhina?|n Āe,|w ka|k āwhina|n ahau.|a Ka~kite!|w','KEE-ah OR-ah… kay teh PEE-rah-ngee KOH-eh kee teh AH-fee-nah… AH-eh, kah AH-fee-nah ah-HOW… kah KEE-teh','Real conversation, nothing memorised.','Pass it around the circle. Each person asks the next Kei te pīrangi koe ki te āwhina? and the next person answers. If you stumble, that’s my fault, not yours.','Individual']],
+        DR:{title:'Ka Āwhina Tātou — We Will Help',cast:CAST_TAMA_KAIAKO,lines:[
+          ['Kaiako Rose','Kia ora, tamariki! E mahi ana tātou ināianei.','Hello, children! We are working now.','(stacks books on her desk)','T1W1'],
+          ['Hana','Kia ora, Kaiako! Ka āwhina ahau.','Hello, teacher! I will help.','(steps forward)'],
+          ['Kaiako Rose','Kei te pīrangi koe ki te āwhina, Tama?','Do you want to help, Tama?','(holds out her hand)','T3W1'],
+          ['Tama','Āe, ka āwhina au!','Yes, I will help!','(nods)','T3W7'],
+          ['Kaiako Rose','Ka tiaki koe i ngā pukapuka, Tama?','Will you look after the books, Tama?','(passes him the pile)'],
+          ['Tama','Āe, ka tiaki ahau i ngā pukapuka.','Yes, I will look after the books.','(cradles the books)'],
+          ['Hana','Ka āwhina ahau i tōku hoa.','I will help my friend.','(picks up some books too)'],
+          ['Kaiako Rose','E āwhina ana koutou. Ka rawe!','You are all helping. Awesome!','(claps)','T1W10'],
+          ['Tama','E āwhina ana tāua, Hana!','You and I are helping, Hana!','(smiles at her)','T3W7'],
+          ['Hana','Kei te harikoa ahau!','I am happy!','(smiles)','T1W2'],
+          ['Kaiako Rose','Ka pai tō mahi, Hana!','Your work is good, Hana!','(thumbs up)'],
+          ['Kaiako Rose','E aroha ana te Atua ki a koutou.','God loves all of you.','(to the audience, in English) God has given each of us gifts and talents, and none of them is too small. When we use what we have to help someone else, we are serving. That is manaaki.','T1W9'],
+          ['Tama','Kia ora, Kaiako. Ka kite!','Thank you, teacher. See you!','(Hana waves too)','T1W9']]},
+        EX:[['Say in te reo: ‘I will help.’','Ka āwhina ahau.'],['What does tiaki mean?','Look after / care for.'],['Choose the sentence: ____ ahau i tōku hoa. (I will help my friend.) (Ka āwhina / E āwhina ana)','Ka āwhina'],['Say in te reo: ‘Do you want to help?’','Kei te pīrangi koe ki te āwhina?'],['Stretch: say ‘I will look after the books.’ then ask your partner if they want to help.','Ka tiaki ahau i ngā pukapuka. Kei te pīrangi koe ki te āwhina?']],
+        CE:['Leaving out Ka, or putting the person before āwhina','Not knowing that tiaki means to look after','Using E … ana (now) when the helping is still to come','Leaving out ki te before āwhina in the question','Leaving out i before who or what we help'],
+        T:'T3 W9 Lesson A',
+        LP:{title:'Ka āwhina ahau — I will help',val:'Manaaki · 1 Peter 4:10',pat:['Ka āwhina ________.','Kei te pīrangi koe ki te āwhina? Āe, ka āwhina ahau.','Ka tiaki ahau i te ________.'],swap:'People: ahau · koe · ia · tāua · māua · tātou · mātou. Helping: āwhina · tiaki · tuku · manaaki. Who or what: i te kaiako · i tōku hoa · i ngā pukapuka.'}
+      }
+    };
+
+    // ── Lesson B · Ka hapai ahau i te kapu — I will carry the cup ──
+    const B = {
+      P: {
+        t:3,
+        w:9,
+        l:'B',
+        ch:'Ka|k hapai|n* ahau|a i~te|k kapu.|n',
+        sub:'How do we serve at home and at school? Today we add hapai and tautoko, and say we helped, are helping and will help.',
+        say:'Kia ora everyone! Last lesson we learned Ka āwhina ahau, I will help, and how to ask Kei te pīrangi koe ki te āwhina? Today we add two new words. Hapai means to lift or carry, and tautoko means to support or back someone up. We also use the three times with āwhina: I āwhina ahau inanahi, E āwhina ana ahau ināianei, Ka āwhina ahau āpōpō. And we practise saying thank you for help: Kia ora mō tō āwhina. Still no writing: listen, think and speak. Mime carrying a cup carefully.',
+        pron:'hapai = HAH-pie · tautoko = TOW-toh-koh · āwhina = AH-fee-nah · tiaki = TEE-ah-kee · inanahi = ee-NAH-nah-hee · ināianei = ee-NAH-ee-ah-nay',
+        li:'say we helped, are helping and will help, and offer to carry and support, using āwhina, hapai and tautoko, in te reo.',
+        succ:['I can say what I will carry or help with: Ka hapai ahau i te kapu. Ka āwhina tāua.','I can say helping in the past, now and future: I āwhina ahau. E āwhina ana ahau. Ka āwhina ahau.','I can thank someone for helping: Kia ora mō tō āwhina.'],
+        wp:'The Son of Man did not come to be served, but to serve.',
+        ref:'Mark 10:45',
+        mom:'Jesus is our example. He is the greatest of all, and he chose to serve. When we help, carry something or support a friend, we follow him. Serving is not only for adults. It is for everyone, and it often starts with something small.',
+        q:'Who could you help at home or at school, and what small job could you do for them?',
+        recall:[['How do you say: I will help.','Ka āwhina ahau.'],['How do you say: Do you want to help?','Kei te pīrangi koe ki te āwhina?'],['How do you say: Sit down. Here is the food.','Noho mai. Anei te kai.'],['How do you say: We are not tired.','Kāore tātou i te ngenge.']],
+        rtag:'Lesson A and earlier',
+        rtxt:'Remember when… Lesson A and earlier (4 quick prompts)',
+        refl:'What small job did you do for someone today?',
+        next:'Week 10: Whakaaturanga, the Term 3 showcase',
+        vsay:'Same vocab card as Lesson A, with two stretch words today: hapai (lift, carry) and tautoko (support, back up). Mime lifting something for hapai and put a hand on a friend’s shoulder for tautoko. Hapai = HAH-pie. Tautoko = TOW-toh-koh.',
+        dsay:'One line per click. The actor reads aloud and the class echoes. Press T for English. In line 12 Kuia Mere speaks in English to the audience.',
+        xlook:'Prompt 1: Ka, hapai, then the person, then i te and the thing. Prompt 3: I for the past, not Ka.',
+        xresc:'Common error: mixing up the three times (I, E … ana, Ka). Say: I is finished, E … ana is happening now, Ka is still to come.',
+        xpron:'hapai = HAH-pie · tautoko = TOW-toh-koh · āwhina = AH-fee-nah',
+        cur:cu3('Communication (offering to carry or support, saying we helped, are helping and will help, thanking someone for their help) · Language Knowledge (Ka hapai ahau i te …; Ka tautoko ahau i tōku hoa; I / E … ana / Ka āwhina; Kia ora mō tō āwhina) · Cultural Knowledge (serving at home and school; Jesus as the servant leader; mahi tahi, working together)','Recycles Lesson A, Term 3 Weeks 3, 4, 6, 7 and 8. Please have a fluent speaker confirm Ka hapai ahau i te kapu, Ka tautoko ahau i tōku hoa, and Kia ora mō tō āwhina.'),
+        vr:valueRows('Mark 10:45','Jesus is our example. He is the greatest of all, and he chose to serve. Serving is for everyone, and it often starts with something small.','Who could you help at home or at school, and what small job could you do for them?','Opening and closing karakia; Kuia Mere’s English line in the drama; Soli Deo Gloria.',MV3),
+        prep:['Open the lesson slides and check the projector; press N for presenter notes.','Use the same vocab card as Lesson A. Add hapai and tautoko as the two stretch words, written or spoken.','Collect props to carry: a cup, a book, a chair.','Choose three drama readers (Hana, Tama, Kuia Mere) and rotate roles.','Practise the actions: lifting for hapai, a hand on the shoulder for tautoko.'],
+        three:'(1) <i>hapai</i> = lift or carry; <i>tautoko</i> = support. (2) The three times work with <i>āwhina</i>: <i>I āwhina ahau</i> (I helped), <i>E āwhina ana ahau</i> (I am helping), <i>Ka āwhina ahau</i> (I will help). (3) To thank someone: <i>Kia ora mō tō āwhina</i> = thank you for your help.',
+        diff:['Echo as a whole class and use the actions for every word. Use only Ka āwhina ahau and Ka hapai ahau at first. Pair with a confident partner and allow whispering first.','Complete all steps. Ask and answer in pairs and say what you will carry or help with.','Add hapai and tautoko. Explain in English what serving means, use all three times, and thank a classmate for helping.'],
+        look:'Ka hapai said with the right person; the three times used correctly; tautoko pronounced TOW-toh-koh; Kia ora mō tō āwhina said warmly; a willing tone.',
+        nx:'revisit the three times with students in Starting; move to Week 10 (Whakaaturanga).',
+        rec:'Lesson A (Ka āwhina ahau, Kei te pīrangi koe ki te āwhina?, tiaki), Term 3 Weeks 3, 4, 6, 7 and 8 (I haere ahau, Ka haere, Kāore … i te …, tāua, Noho mai) are recalled in the warm-up, steps and drama. Week 10 will bring all of Term 3 together.'
+      },
+      D: {
+        VOC:[...A.D.VOC,'hapai','tautoko'],
+        STEPS:[
+          ['Quick recap: I will help. You will help. We all will help.','Ka|k āwhina|n ahau.|a Ka|k āwhina|n koe.|a Ka|k āwhina|n tātou.|a','kah AH-fee-nah ah-HOW · kah AH-fee-nah KOH-eh · kah AH-fee-nah TAH-toh','Lesson A: Ka + āwhina + the person.',null,'Whole class'],
+          ['Quick recap: Do you want to help? Yes, I will help.','Kei~te|k pīrangi|n koe|a ki~te|k āwhina?|n Āe,|w ka|k āwhina|n ahau.|a','kay teh PEE-rah-ngee KOH-eh kee teh AH-fee-nah? AH-eh, kah AH-fee-nah ah-HOW','Lesson A: asking and answering.',null,'Whole class'],
+          ['New word: hapai means to lift or carry. How would you say: I will carry the cup.','Ka|k hapai|n* ahau|a i~te|k kapu.|n','kah HAH-pie ah-HOW ee teh KAH-poo','Ka + hapai + the person + i te + the thing.','Mime lifting a cup carefully. Hapai means to lift or carry. Take a moment… (wait 3 seconds)… Ka hapai ahau i te kapu. Say it with me.','Echo'],
+          ['Swap the people and the things: You and I will carry the chair. They two will carry the book.','Ka|k hapai|n tāua|a i~te|k tūru.|n Ka|k hapai|n rāua|a i~te|k pukapuka.|n','kah HAH-pie TAH-oo-ah ee teh TOO-roo · kah HAH-pie RAH-oo-ah ee teh POO-kah-POO-kah','Swap the people word and the thing.',null,'Whole class'],
+          ['New word: tautoko means to support. How would you say: I will support my friend.','Ka|k tautoko|n* ahau|a i~tōku|k hoa.|n','kah TOW-toh-koh ah-HOW ee TOH-koo HOR-ah','tautoko = support or back up. Who we support comes after i.','Put a hand on a friend’s shoulder. Tautoko means to support someone. Take a moment… (wait 3 seconds)… Ka tautoko ahau i tōku hoa. Say it with me.','Echo'],
+          ['The three times: I helped yesterday. I am helping now. I will help tomorrow.','I|k āwhina|n ahau|a inanahi.|q E|k āwhina|n ana|k ahau|a ināianei.|q Ka|k āwhina|n ahau|a āpōpō.|q','ee AH-fee-nah ah-HOW ee-NAH-nah-hee · eh AH-fee-nah AH-nah ah-HOW ee-NAH-ee-ah-nay · kah AH-fee-nah ah-HOW AH-por-por','I = finished, E … ana = now, Ka = still to come.','Point behind you for I, at the floor for E … ana and ahead for Ka. Say each sentence with me and move your hand to match.','Gesture'],
+          ['With the people words: We two helped. They helped. We (not you) will help.','I|k āwhina|n māua.|a I|k āwhina|n rātou.|a Ka|k āwhina|n mātou.|a','ee AH-fee-nah MAH-oo-ah · ee AH-fee-nah RAH-toh · kah AH-fee-nah MAH-toh','Week 7: the people word goes after the action.',null,'Whole class'],
+          ['Partner game: ask your partner if they want to help. They say what they will carry or who they will support. Then swap.','Kei~te|k pīrangi|n koe|a ki~te|k āwhina?|n Āe,|w ka|k hapai|n ahau|a i~te|k ___.|n','kay teh PEE-rah-ngee KOH-eh kee teh AH-fee-nah? AH-eh, kah HAH-pie ah-HOW ee teh ___','Use kapu, tūru, pukapuka, or ka tautoko ahau i tōku hoa. Swap after three.','Turn to your partner. One person asks Kei te pīrangi koe ki te āwhina? The other answers Āe, ka hapai ahau i te … or Āe, ka tautoko ahau i tōku hoa. Swap after three. Take 2 minutes while I listen.','Pairs'],
+          ['Ask a group: Do you all want to help? Yes, we will help.','Kei~te|k pīrangi|n koutou|a ki~te|k āwhina?|n Āe,|w ka|k āwhina|n mātou.|a','kay teh PEE-rah-ngee KOH-toh kee teh AH-fee-nah? AH-eh, kah AH-fee-nah MAH-toh','koutou for a group you are speaking to, mātou for the group answering.',null,'Whole class'],
+          ['Thank someone: Thank you for your help.','Kia~ora|w mō~tō|k āwhina.|n','KEE-ah OR-ah mor TOR AH-fee-nah','Kia ora mō … = thank you for … tō = your.','Say it warmly to a partner. Kia ora mō tō āwhina means thank you for your help. Take a moment… (wait 3 seconds)… Kia ora mō tō āwhina. Say it with me.','Echo'],
+          ['Praise good work: Your work is good! Awesome!','Ka~pai|w tō|k mahi!|n Ka~rawe!|w','kah PIE tor MAH-hee! kah RAH-weh','Ka pai tō mahi = your work is good.',null,'Whole class'],
+          ['Put it together: Hello. Do you all want to help? Yes, we will help. We will carry the chair. Thank you for your help.','Kia~ora.|w Kei~te|k pīrangi|n koutou|a ki~te|k āwhina?|n Āe,|w ka|k āwhina|n mātou.|a Ka|k hapai|n tāua|a i~te|k tūru.|n Kia~ora|w mō~tō|k āwhina.|n','KEE-ah OR-ah. kay teh PEE-rah-ngee KOH-toh kee teh AH-fee-nah? AH-eh, kah AH-fee-nah MAH-toh. kah HAH-pie TAH-oo-ah ee teh TOO-roo. KEE-ah OR-ah mor TOR AH-fee-nah','Terms 1 and 3 together.',null,'Whole class'],
+          ['Class chain: ask the next person to help, say what you will carry, thank them, say goodbye.','Kei~te|k pīrangi|n koe|a ki~te|k āwhina?|n Ka|k hapai|n tāua|a i~te|k ___.|n Kia~ora.|w Ka~kite!|w','kay teh PEE-rah-ngee KOH-eh kee teh AH-fee-nah… kah HAH-pie TAH-oo-ah ee teh ___… KEE-ah OR-ah… kah KEE-teh','Real conversation, nothing memorised.','Pass it around the circle. Each person asks the next Kei te pīrangi koe ki te āwhina? and says what the two of you will carry. If you stumble, that’s my fault, not yours.','Individual']],
+        DR:{title:'Te Āwhina i te Kāinga — Helping at Home',cast:CAST_TAMA_KUIA,lines:[
+          ['Kuia Mere','Kia ora, tamariki! E mahi ana au.','Hello, children! I am working.','(carries a tray of cups)','T1W1'],
+          ['Hana','Ka āwhina māua, Kuia!','We two will help, Kuia!','(points at herself and Tama)','T3W7'],
+          ['Kuia Mere','Ka hapai koe i te kapu, Tama?','Will you carry the cup, Tama?','(holds out a cup)'],
+          ['Tama','Āe, ka hapai ahau i te kapu.','Yes, I will carry the cup.','(takes it carefully)'],
+          ['Kuia Mere','Ka hapai koe i te tūru, Hana?','Will you carry the chair, Hana?','(points at a chair)'],
+          ['Hana','Āe, ka hapai au i te tūru.','Yes, I will carry the chair.','(lifts the chair)','T3W7'],
+          ['Tama','Ka tautoko ahau i tōku hoa.','I will support my friend.','(puts a hand on Hana’s shoulder)'],
+          ['Kuia Mere','Kia ora mō tō āwhina!','Thank you for your help!','(hands together)'],
+          ['Hana','E āwhina ana tāua, Tama!','You and I are helping, Tama!','(smiles)','T3W7'],
+          ['Kuia Mere','Ka āwhina tātou āpōpō!','We will all help tomorrow!','(points ahead)','T3W4'],
+          ['Tama','I āwhina māua inanahi, Kuia!','We two helped yesterday, Kuia!','(points behind him)','T3W3'],
+          ['Kuia Mere','E aroha ana te Atua ki a koutou.','God loves all of you.','(to the audience, in English) God gives each of us gifts, big or small. Jesus came to serve, and when we use our gifts to help others, we follow him. Even carrying a cup is serving. That is manaaki.','T1W9'],
+          ['Tama','Kia ora, Kuia. Ka kite!','Thank you, Kuia. See you!','(Hana waves too)','T1W9']]},
+        EX:[['Say in te reo: ‘I will carry the cup.’','Ka hapai ahau i te kapu.'],['What does tautoko mean?','Support / back up.'],['Choose the sentence: ____ ahau inanahi. (I helped yesterday.) (I āwhina / Ka āwhina)','I āwhina'],['Say in te reo: ‘Thank you for your help.’','Kia ora mō tō āwhina.'],['Stretch: say ‘We two helped yesterday. You and I will help tomorrow.’','I āwhina māua inanahi. Ka āwhina tāua āpōpō.']],
+        CE:['Leaving out Ka before hapai, or mixing up hapai with tiaki','Not knowing that tautoko means to support','Using Ka (future) for something that has already happened','Leaving out mō (thank you for) or tō (your)','Mixing up māua (she or he and I) and tāua (you and I)'],
+        T:'T3 W9 Lesson B',
+        LP:{title:'Ka hapai ahau i te kapu — I will carry the cup',val:'Manaaki · Mark 10:45',pat:['Ka hapai ________ i te ________.','I āwhina ahau. E āwhina ana ahau. Ka āwhina ________.','Kia ora mō tō āwhina.'],swap:'Helping: āwhina · hapai (carry) · tautoko (support) · tiaki (look after). Times: I … inanahi · E … ana ināianei · Ka … āpōpō. Things: kapu · tūru · pukapuka.'}
+      }
+    };
+
+    addLessons({ '3.9.A': A, '3.9.B': B });
+  }
+
+  /* ──────── WEEK 10 · Whakaaturanga (showcase) ──────── */
+  {
+    addGlossary({
+      "mahi tahi":["work together / teamwork","MAH-hee TAH-hee",10,3],
+      "arohanui":["much love / with love (a warm way to finish)","ah-ROH-hah-NOO-ee",10,3]
+    });
+
+    // ── Lesson A · Nau mai ki te hākari — Welcome to the hākari (Weeks 1 to 9 together) ──
+    const A = {
+      P: {
+        t:3,
+        w:10,
+        l:'A',
+        ch:'Nau~mai!|w Haere~mai|w ki~te|k hākari!|n',
+        sub:'Showcase week! Today we plan and rehearse our hākari role-play, joining everything from Weeks 1 to 9.',
+        say:'Kia ora everyone! This is our showcase week. You already own every piece: food, feelings, now, past and future, saying no, all the people words, welcoming and helping. Today we stack them into one hākari role-play, and next lesson we share it. Our value this term is Manaaki: serving faithfully with our gifts and talents. A hākari is the perfect place to show it. There is no new grammar to fear, only new ways to join the pieces you know. Still no writing: listen, think and speak. Open your arms like a host.',
+        pron:'hākari = HAH-kah-ree · manuhiri = mah-noo-HEE-ree · kāore = KAH-or-eh · tēnā koutou = TEH-nah KOH-toh · noho mai = NOH-hoh MY · tuku = TOO-koo',
+        li:'join sentences from Weeks 1 to 9 into a hākari role-play: welcome a guest, offer kai, say yes or no politely and offer to help, in te reo.',
+        succ:['I can welcome a guest and offer kai: Nau mai! Haere mai ki te hākari! Noho mai. Anei te kai.','I can answer politely and say thank you: Āe, kia ora mō te kai. Kāo, kāore ahau i te hiakai.','I can join six or more sentences into one hākari kōrero, including something about now, past or future and an offer to help.'],
+        wp:'Whatever you do, do it all in the name of the Lord Jesus, giving thanks to God.',
+        ref:'Colossians 3:17',
+        mom:'Everything we have learned this term is a gift from God. When we use our words to welcome, feed and help other people, we are doing it in his name, and we give thanks. That is manaaki.',
+        q:'Who do you want to welcome and serve at our hākari, and how will you make them feel at home?',
+        recall:[['How do you say: I went to school yesterday.','I haere ahau ki te kura inanahi.'],['How do you say: I am not hungry.','Kāore ahau i te hiakai.'],['How do you say: You and I are eating.','E kai ana tāua.']],
+        rtag:'Term 3 Weeks 3, 6 and 7',
+        rtxt:'Remember when… Term 3 Weeks 3, 6 and 7 (3 quick prompts)',
+        refl:'How did you make someone feel welcome today?',
+        next:'Lesson B: our hākari showcase',
+        vsay:'Every word today is an old friend from Weeks 6 to 9. Say each word and the class echoes, with an action: open arms for nau mai, point at a pretend visitor for manuhiri, spread your arms over the table for hākari, hold out a picture card for anei, pat a chair for noho mai, hold out a plate for tuku, a helping hand for āwhina, shake your head gently for kāore, and sweep your arm across the room for tēnā koutou.',
+        dsay:'One line per click. The actor reads aloud and the class echoes. Press T for English. In line 12 Kaiako Rose speaks in English to the audience.',
+        xlook:'Prompt 1: nau mai (welcome), haere mai (come) and ki te before hākari. Prompt 3: Kāore (is not), not Kei te.',
+        xresc:'Common error: mixing up Kāore and Kei te. Say: Kei te says it is so; Kāore says it is not so. Or leaving out ki te. Say: ki te goes before the thing, like ki te hākari.',
+        xpron:'hākari = HAH-kah-ree · manuhiri = mah-noo-HEE-ree · kāore = KAH-or-eh',
+        cur:cu3('Communication (welcoming and hosting a guest, offering and answering politely, talking about now, past and future, offering to help) · Language Knowledge (joining Nau mai, Noho mai, Anei te …, Kei te pīrangi koe ki te …?, Kāore … i te …, I / E … ana / Ka, and Ka āwhina ahau into one kōrero) · Cultural Knowledge (manaakitanga: a hākari as a place to serve others; performance as a way of sharing)','Recycles all of Term 3 Weeks 1 to 9, and Term 1 Weeks 1, 9 and 10. Use picture cards, not real food (allergies and whānau food practices). Please have a fluent speaker confirm Nau mai! Haere mai ki te hākari! and the drama title Te Hākari o te Kura.'),
+        vr:valueRows('Colossians 3:17','Everything we have learned this term is a gift from God. When we use our words to welcome, feed and help other people, we are doing it in his name, and we give thanks. That is manaaki.','Who do you want to welcome and serve at our hākari, and how will you make them feel at home?','Opening and closing karakia; Kaiako Rose’s English line in the drama; Soli Deo Gloria.',MV3),
+        prep:['Open the lesson slides and check the projector; press N for presenter notes.','Print the weekly vocab card, one per student. It doubles as a sentence menu for their hākari kōrero.','Prepare picture cards of food (not real food) and push some desks together as the hākari table.','Print the Term 3 pack (📊 button): the Showcase rubric lets you listen and tick as students share in Lesson B.','Choose three drama readers (Hana, Tama, Kaiako Rose) and rotate roles. Decide who the audience will be for Lesson B (another class, whānau or the school) and tell students kindly.'],
+        three:'(1) Nothing here is new grammar: every sentence is one students already own. (2) A hākari flows in order: <i>Nau mai</i> (welcome), <i>Noho mai</i> (sit), <i>Anei te kai</i> (offer), the answer (<i>Āe, kia ora mō te kai</i> or <i>Kāo, kāore ahau i te hiakai</i>), then thanks. (3) Mix in the three times: <i>I kai tātou inanahi</i>, <i>E kai ana tātou ināianei</i>, <i>Ka kai tātou āpōpō</i>.',
+        diff:['Echo as a whole class. Use the vocab card as a sentence menu and choose only four sentences for the hākari. Pair with a confident partner and allow whispering first.','Complete all steps. Host and guest in pairs, then share a hākari kōrero of six or more sentences in order.','Add the three times, a polite no with a reason, and an offer to help. Explain in English what manaaki means and cheer others on with Ka pai!'],
+        look:'Clear vowels and macrons; each sentence in the right pattern; welcome, offer, answer and thanks in a sensible order; Kāore used correctly for no; students choosing and joining pieces with confidence; warm encouragement of partners.',
+        nx:'revisit the pattern with the most errors for students in Starting; ask every student to choose their hākari kōrero for Lesson B.',
+        rec:'All of Term 3 Weeks 1 to 9 are recalled: the warm-up (Weeks 3, 6, 7), the steps (Weeks 1, 2, 4, 6, 7, 8, 9) and the drama (Weeks 1, 6, 7, 8, 9). Lesson B is the showcase.'
+      },
+      D: {
+        VOC:['nau mai','manuhiri','hākari','anei','noho mai','manaaki','tuku','āwhina','kāore','tēnā koutou'],
+        STEPS:[
+          ['Quick recap: Welcome! Come to the food! Here is the bread.','Nau~mai!|w Haere~mai|w ki~te|k kai!|n Anei|k te|k parāoa.|n','NOW-my! HIGH-reh MY kee teh KYE. AH-neh-ee teh pah-RAH-or-ah','Term 3 Week 8: welcoming and offering.',null,'Whole class'],
+          ['Today’s big sentence. How would you say: Welcome! Come to the hākari!','Nau~mai!|w Haere~mai|w ki~te|k hākari!|n*','NOW-my! HIGH-reh MY kee teh HAH-kah-ree','Same pattern as Week 8: haere mai ki te + the place or the event.','Open your arms like a host at a big table. You know Nau mai! Haere mai ki te kai! Today the food becomes a hākari, a big shared meal. Take a moment… (wait 3 seconds)… Nau mai! Haere mai ki te hākari! Say it with me.','Echo'],
+          ['Greet the guests: one guest, two guests, three or more guests.','Tēnā~koe.|w Tēnā~kōrua.|w Tēnā~koutou.|w','TEH-nah KOH-eh · TEH-nah KOH-roo-ah · TEH-nah KOH-toh','Tēnā + the people word: koe (one), kōrua (two), koutou (three or more).','Hold up one, two, then three fingers. Say each one with me. A good host always greets people the right way.','Gesture'],
+          ['Seat your guest and offer the food: Sit down. Here is the food.','Noho~mai.|w Anei|k te|k kai.|n','NOH-hoh MY. AH-neh-ee teh KYE','Week 8: noho mai, then anei te + the thing.',null,'Whole class'],
+          ['Ask your guest: Do you want bread?','Kei~te|k pīrangi|n koe|a ki~te|k parāoa?|n','kay teh PEE-rah-ngee KOH-eh kee teh pah-RAH-or-ah','Week 1: Kei te pīrangi koe ki te + the food.','You asked this in the very first week of the term. Hold out a picture card and ask it kindly. Take a moment… (wait 3 seconds)… Kei te pīrangi koe ki te parāoa? Say it with me.','Echo'],
+          ['The guest answers yes, and then a polite no: Yes, I am hungry. No, I am not hungry.','Āe,|w kei~te|k hiakai|n ahau.|a Kāo,|w kāore|k ahau|a i~te|k hiakai.|n','AH-eh, kay teh HEE-ah-kye ah-HOW · KAH-or, KAH-or-eh ah-HOW ee teh HEE-ah-kye','Week 6: Kāore + the person + i te + the feeling. A polite no is still manaaki.',null,'Whole class'],
+          ['The host offers: I will offer the bread.','Ka|k tuku|n ahau|a i~te|k parāoa.|n','kah TOO-koo ah-HOW ee teh pah-RAH-or-ah','Week 8: Ka tuku ahau i te + the thing.','Hold out a plate and move it slowly forward. Tuku means to give or offer, and Ka makes it the future: I will offer. Say it with me.','Echo'],
+          ['Partner game: one of you is the host and one is the guest. Welcome, seat, offer, answer and thank. Then swap.','Nau~mai!|w Noho~mai.|w Kei~te|k pīrangi|n koe|a ki~te|k ___?|n Āe,|w kia~ora~mō~te~kai.|w','NOW-my! NOH-hoh MY. kay teh PEE-rah-ngee KOH-eh kee teh ___? AH-eh, KEE-ah OR-ah mor teh KYE','Swap in any food word. The guest may answer Āe or Kāo, kāore ahau i te hiakai. We use picture cards, not real food.','Turn to your partner. One of you is the host and one is the guest. The host welcomes, seats the guest, and asks Kei te pīrangi koe ki te …? The guest answers politely and says Kia ora mō te kai. Swap after three. Take 2 minutes while I listen.','Pairs'],
+          ['The three times at the hākari: We ate yesterday. We are eating now. We will eat tomorrow.','I|k kai|n tātou|a inanahi.|q E|k kai|n ana|k tātou|a ināianei.|q Ka|k kai|n tātou|a āpōpō.|q','ee KYE TAH-toh ee-NAH-nah-hee · eh KYE AH-nah TAH-toh ee-NAH-ee-ah-nay · kah KYE TAH-toh AH-por-por','I = finished, E … ana = now, Ka = still to come.','Point behind you for I, at the floor for E … ana and ahead for Ka. Say each sentence with me and move your hand to match.','Gesture'],
+          ['The host cares for the guests: We are caring for the guests. (We do not include the guests.)','E|k manaaki|n ana|k mātou|a i~te|k manuhiri.|n','eh mah-NAH-kee AH-nah MAH-toh ee teh mah-noo-HEE-ree','Week 8: E … ana + manaaki + mātou (we, not including you) + i te + who is cared for.',null,'Whole class'],
+          ['Offer to help: Do you want to help? Yes, I will help.','Kei~te|k pīrangi|n koe|a ki~te|k āwhina?|n Āe,|w ka|k āwhina|n ahau.|a','kay teh PEE-rah-ngee KOH-eh kee teh AH-fee-nah? AH-eh, kah AH-fee-nah ah-HOW','Week 9: a good host helps too.','Hold out a helping hand. Last week’s serving words join the hākari. Say each one with me.','Whole class'],
+          ['Put it together: Welcome! Come to the hākari. Sit down. Do you want bread? Yes, thank you for the food. I will help.','Nau~mai!|w Haere~mai|w ki~te|k hākari!|n Noho~mai.|w Kei~te|k pīrangi|n koe|a ki~te|k parāoa?|n Āe,|w kia~ora~mō~te~kai.|w Ka|k āwhina|n ahau.|a','NOW-my! HIGH-reh MY kee teh HAH-kah-ree. NOH-hoh MY. kay teh PEE-rah-ngee KOH-eh kee teh pah-RAH-or-ah? AH-eh, KEE-ah OR-ah mor teh KYE. kah AH-fee-nah ah-HOW','Terms 1 and 3 together.',null,'Whole class'],
+          ['Class chain: welcome the next person, offer kai, they answer and thank you, then say goodbye.','Nau~mai!|w Anei|k te|k kai.|n Kia~ora~mō~te~kai.|w Ka~kite!|w','NOW-my! AH-neh-ee teh KYE. KEE-ah OR-ah mor teh KYE. kah KEE-teh','Real hosting, nothing memorised.','Pass it around the circle. Each person welcomes the next one and holds out a picture card: Nau mai! Anei te … The next person says Kia ora mō te kai, then welcomes the person after them. If you stumble, that’s my fault, not yours.','Individual']],
+        DR:{title:'Te Hākari o te Kura — The School Hākari',cast:CAST_TAMA_KAIAKO,lines:[
+          ['Kaiako Rose','Tēnā koutou, tamariki! He hākari tēnei!','Greetings, children! This is a feast!','(spreads her arms over the table)','T3W8'],
+          ['Hana','Kia ora, Kaiako! Ka āwhina ahau.','Hello, teacher! I will help.','(steps forward)','T3W9'],
+          ['Kaiako Rose','Nau mai, Tama! He manuhiri koe.','Welcome, Tama! You are a guest.','(opens her arms to him)','T3W8'],
+          ['Tama','Tēnā koe, Kaiako. Kei te hiakai ahau.','Greetings, teacher. I am hungry.','(rubs his tummy)','T3W1'],
+          ['Hana','Noho mai, Tama. Anei te parāoa.','Sit down, Tama. Here is the bread.','(holds out the picture card)','T3W8'],
+          ['Tama','Kia ora mō te kai, Hana!','Thank you for the food, Hana!','(takes the card)','T1W9'],
+          ['Kaiako Rose','Kei te pīrangi koe ki te mīti, Tama?','Do you want meat, Tama?','(holds up a second card)','T3W1'],
+          ['Tama','Kāo, kāore ahau i te pīrangi ki te mīti.','No, I do not want meat.','(shakes his head politely)','T3W6'],
+          ['Hana','E kai ana tāua, Tama!','You and I are eating, Tama!','(sits beside him)','T3W7'],
+          ['Kaiako Rose','Ka pai tō mahi, Hana! Ka rawe!','Your work is good, Hana! Awesome!','(thumbs up)','T3W9'],
+          ['Hana','Ka tiaki ahau i ngā kapu, Kaiako.','I will look after the cups, teacher.','(stacks the cups)','T3W9'],
+          ['Kaiako Rose','E aroha ana te Atua ki a koutou.','God loves all of you.','(to the audience, in English) Whatever we do, we can do it in the name of Jesus and give thanks to God. Today we welcomed a guest, shared kai and helped each other. That is manaaki.','T1W9'],
+          ['Tama','Kia ora, Kaiako. Ka kite!','Thank you, teacher. See you!','(Hana waves too)','T1W9']]},
+        EX:[['Say in te reo: ‘Welcome! Come to the hākari!’','Nau mai! Haere mai ki te hākari!'],['What does manuhiri mean?','Guest / visitor.'],['Choose the sentence: ____ ahau i te hiakai. (I am not hungry.) (Kāore / Kei te)','Kāore'],['Say in te reo: ‘Do you want bread? Yes, thank you for the food.’','Kei te pīrangi koe ki te parāoa? Āe, kia ora mō te kai.'],['Stretch: say ‘Welcome! Here is the bread.’ then ask your partner if they want to help.','Nau mai! Anei te ___. Kei te pīrangi koe ki te āwhina?']],
+        CE:['Leaving out ki te before hākari, or mixing up nau mai (welcome) and haere mai (come)','Not knowing that manuhiri means guest or visitor','Using Kei te (is) instead of Kāore (is not) in a not-sentence','Leaving out ki te after pīrangi koe, or leaving out mō te in the thank you','Leaving out Anei before te and the food word, or leaving out ki te before āwhina'],
+        T:'T3 W10 Lesson A',
+        LP:{title:'Nau mai ki te hākari — Welcome to the hākari (Weeks 1 to 9 together)',val:'Manaaki · Colossians 3:17',pat:['Nau mai! Haere mai ki te ________!','Kei te pīrangi koe ki te ________? Āe, kia ora mō te kai.','Ka ________ ahau i te ________.'],swap:'Join sentences in order: welcome · sit · offer · answer · thanks · help · goodbye. Times: I … inanahi · E … ana ināianei · Ka … āpōpō. Polite no: Kāo, kāore ahau i te hiakai.'}
+      }
+    };
+
+    // ── Lesson B · Te Hākari — Our hākari showcase ──
+    const B = {
+      P: {
+        t:3,
+        w:10,
+        l:'B',
+        ch:'Kia~ora|w mō~te|k hākari!|n',
+        sub:'Showcase day! Today we share our hākari kōrero, work together, cheer each other on and give thanks.',
+        say:'Kia ora everyone! Today is our showcase. You have been learning for a whole term and nobody has written a thing. Today you share what you can say: you are the hosts and the guests at our hākari. We add two small words to finish: mahi tahi, which means work together, and arohanui, which means much love. We cheer for every voice. Remember: if you stumble, that’s my fault, not yours. Ka pai! Link your hands together, ready to work as a team.',
+        pron:'mahi tahi = MAH-hee TAH-hee · arohanui = ah-ROH-hah-NOO-ee · hākari = HAH-kah-ree · Ka pai = kah PIE · Ka rawe = kah RAH-weh · Kia kaha = KEE-ah KAH-hah',
+        li:'share a hākari kōrero with an audience, work together, cheer others on and give thanks to God, using mahi tahi and arohanui, in te reo.',
+        succ:['I can welcome and host a guest from welcome to thank you: Nau mai. Noho mai. Anei te kai. Kia ora mō te kai.','I can say we are working together, and finish warmly: E mahi tahi ana tātou. Arohanui ki a koutou.','I can share my hākari kōrero with an audience and cheer others: Ka pai! Ka rawe! Kia kaha!'],
+        wp:'Serve the Lord with gladness; come before him with joyful songs.',
+        ref:'Psalm 100:2',
+        mom:'We serve God when we serve each other, and he loves it when we do it with a glad heart. Today we have used our gifts of language, kindness and teamwork to welcome, feed and help. That is Manaaki, and it is something to be glad about.',
+        q:'What are you most proud of learning in te reo this term, and who helped you?',
+        recall:[['How do you say: Welcome! Come to the hākari!','Nau mai! Haere mai ki te hākari!'],['How do you say: I will help my friend.','Ka āwhina ahau i tōku hoa.'],['How do you say: You are not thirsty.','Kāore koe i te hiainu.'],['How do you say: I went home yesterday.','I haere ahau ki te kāinga inanahi.']],
+        rtag:'Lesson A and earlier',
+        rtxt:'Remember when… Lesson A and earlier (4 quick prompts)',
+        refl:'What are you proud of this term, and who helped you?',
+        next:'Term 4: Pānga, Ko wai tātou? (Ko … te maunga: our pepeha)',
+        vsay:'Same vocab card as Lesson A, with two stretch words today: mahi tahi (work together) and arohanui (much love). Link both hands together for mahi tahi and put a hand on your heart for arohanui. Say them slowly: MAH-hee TAH-hee, ah-ROH-hah-NOO-ee.',
+        dsay:'One line per click. The actor reads aloud and the class echoes. Press T for English. In line 12 Kuia Mere speaks in English to the audience.',
+        xlook:'Prompt 1: E first, then mahi tahi together, then ana, then the people word. Prompt 3: I for the past, not Ka.',
+        xresc:'Common error: leaving out ana, or using Ka for something already finished. Say: E goes first and ana comes after; I is finished and Ka is still to come.',
+        xpron:'mahi tahi = MAH-hee TAH-hee · arohanui = ah-ROH-hah-NOO-ee · noho mai = NOH-hoh MY',
+        cur:cu3('Communication (sharing a hākari kōrero with an audience, hosting and answering politely, encouraging others, giving thanks) · Language Knowledge (consolidating Term 3 patterns; E mahi tahi ana tātou; Arohanui ki a koutou; Ka pai, Ka rawe, Kia kaha) · Cultural Knowledge (performance as a form of sharing and manaakitanga; teamwork; closing a term with thanks)','Recycles all of Term 3 Weeks 1 to 9 and Term 1 Week 10. Invite the audience to respond with Ka pai! Use the Showcase rubric (Term 3 pack) as assessment evidence for the term. Use picture cards, not real food. Please have a fluent speaker confirm E mahi tahi ana tātou, Arohanui ki a koutou, and the drama title Te Hākari o te Whānau.'),
+        vr:valueRows('Psalm 100:2','We serve God when we serve each other, and he loves it when we do it with a glad heart. Today we have used our gifts of language, kindness and teamwork to welcome, feed and help.','What are you most proud of learning in te reo this term, and who helped you?','Opening and closing karakia; Kuia Mere’s English line in the drama; Soli Deo Gloria, the school motto.',MV3),
+        prep:['Open the lesson slides and check the projector; press N for presenter notes.','Use the same vocab card as Lesson A. Add mahi tahi (work together) and arohanui (much love) as the two stretch words.','Print the Showcase rubric (Term 3 pack, 📊 button) and have a pen ready to tick as students share.','Arrange the audience (another class, whānau or the school), a simple stage area and the hākari table with picture cards of food (not real food). Choose three drama readers (Hana, Tama, Kuia Mere).','Plan a kind finish: every performer gets Ka pai! from the whole class.'],
+        three:'(1) Every sentence is one students already own; the showcase is about joining them with confidence. (2) <i>E mahi tahi ana tātou</i> = we are working together. <i>Arohanui ki a koutou</i> = much love to you all, a warm way to finish. (3) <i>Ka pai</i>, <i>ka rawe</i> and <i>kia kaha</i> are cheering words: use them for every performer.',
+        diff:['Echo as a whole class. Perform in a pair or trio. Use the vocab card as a sentence menu and choose four sentences. Allow whispering first.','Share a hākari kōrero of six or more sentences in order with a partner, then for the class.','Add the three times, a polite no with a reason, and questions for the audience. Swap in their own food and people words. Lead the cheering with Ka pai!'],
+        look:'Clear vowels and macrons; each sentence in the right pattern; students joining at least six pieces in order (welcome, offer, answer, thanks, help, goodbye); mahi tahi and arohanui used in the right place; encouragement of others (Ka pai! Kia kaha!); brave attempts, even with help from a partner.',
+        nx:'record each student’s showcase level on the rubric; plan to recycle Term 3 patterns in the Term 4 “Remember when…” warm-ups.',
+        rec:'All of Term 3 Weeks 1 to 9 and Lesson A are recalled: the warm-up (Weeks 3, 6, 9 and Lesson A), the steps (Weeks 1, 2, 4, 6, 7, 8, 9) and the drama (Weeks 1, 2, 6, 7, 8, 9). Term 4 continues to recycle Term 3 patterns.'
+      },
+      D: {
+        VOC:[...A.D.VOC,'mahi tahi','arohanui'],
+        STEPS:[
+          ['Quick recap: Welcome! Come to the hākari. Here is the bread.','Nau~mai!|w Haere~mai|w ki~te|k hākari!|n Anei|k te|k parāoa.|n','NOW-my! HIGH-reh MY kee teh HAH-kah-ree. AH-neh-ee teh pah-RAH-or-ah','Lesson A, stacked.',null,'Whole class'],
+          ['Quick recap: Do you want to help? Yes, I will help.','Kei~te|k pīrangi|n koe|a ki~te|k āwhina?|n Āe,|w ka|k āwhina|n ahau.|a','kay teh PEE-rah-ngee KOH-eh kee teh AH-fee-nah? AH-eh, kah AH-fee-nah ah-HOW','Week 9: offering to help.',null,'Whole class'],
+          ['New words: mahi tahi means work together. How would you say: We are working together.','E|k mahi~tahi|n* ana|k tātou.|a','eh MAH-hee TAH-hee AH-nah TAH-toh','E … ana (now) + mahi tahi + tātou (all of us, including you).','Link both hands together. Mahi means work and tahi means one, so mahi tahi is working as one team. Take a moment… (wait 3 seconds)… E mahi tahi ana tātou. Say it with me.','Echo'],
+          ['Swap the people: You two are working together. They are working together.','E|k mahi~tahi|n ana|k kōrua.|a E|k mahi~tahi|n ana|k rātou.|a','eh MAH-hee TAH-hee AH-nah KOH-roo-ah · eh MAH-hee TAH-hee AH-nah RAH-toh','Week 7: swap the people word at the end.',null,'Whole class'],
+          ['The three times with mahi tahi: We worked together yesterday. We are working together now. We will work together tomorrow.','I|k mahi~tahi|n tātou|a inanahi.|q E|k mahi~tahi|n ana|k tātou|a ināianei.|q Ka|k mahi~tahi|n tātou|a āpōpō.|q','ee MAH-hee TAH-hee TAH-toh ee-NAH-nah-hee · eh MAH-hee TAH-hee AH-nah TAH-toh ee-NAH-ee-ah-nay · kah MAH-hee TAH-hee TAH-toh AH-por-por','I = finished, E … ana = now, Ka = still to come.','Point behind you for I, at the floor for E … ana and ahead for Ka. Say each sentence with me and move your hand to match.','Gesture'],
+          ['A polite no from the guest: No, thank you. I am not hungry.','Kāo,|w kia~ora.|w Kāore|k ahau|a i~te|k hiakai.|n','KAH-or, KEE-ah OR-ah. KAH-or-eh ah-HOW ee teh HEE-ah-kye','Week 6: a polite no is still manaaki. A good host listens.',null,'Whole class'],
+          ['Partner game: one of you is the host and one is the guest. Welcome, seat, offer, answer and thank. Then swap.','Nau~mai!|w Noho~mai.|w Anei|k te|k kai.|n Kei~te|k pīrangi|n koe|a ki~te|k ___?|n Kia~ora~mō~te~kai.|w','NOW-my! NOH-hoh MY. AH-neh-ee teh KYE. kay teh PEE-rah-ngee KOH-eh kee teh ___? KEE-ah OR-ah mor teh KYE','Swap in any food word. The guest may answer yes or give a polite no. We use picture cards, not real food.','Turn to your partner. One of you is the host and one is the guest. The host welcomes, seats the guest and offers the food. The guest answers politely and says Kia ora mō te kai. Swap after three. Take 2 minutes while I listen.','Pairs'],
+          ['New word: arohanui means much love. How would you say: Much love to you all.','Arohanui|w* ki~a~koutou.|a','ah-ROH-hah-NOO-ee kee ah KOH-toh','Aroha (love) + nui (big): arohanui is a warm way to finish. ki a koutou = to you all (three or more).','Put a hand on your heart. You know aroha, love. Add nui, which means big, and you have arohanui, much love. We say it to finish a letter or a visit. Take a moment… (wait 3 seconds)… Arohanui ki a koutou. Say it with me.','Echo'],
+          ['Remember God’s love: God loves all of you. (Say it to the audience.)','E~aroha~ana|k te~Atua|n ki~a~koutou.|a','eh ah-ROH-hah AH-nah teh AH-too-ah kee ah KOH-toh','ki a + koutou: you, three or more.',null,'Whole class'],
+          ['Cheer others on and give thanks: Well done! Awesome! Be strong! Thank you for your help.','Ka~pai!|w Ka~rawe!|w Kia~kaha!|w Kia~ora|w mō~tō|k āwhina.|n','kah PIE! kah RAH-weh! KEE-ah KAH-hah! KEE-ah OR-ah mor TOR AH-fee-nah','Terms 1 and 3 cheering words and Week 9 thanks.',null,'Whole class'],
+          ['Put it together: Welcome! Sit down. Do you want bread? Yes, thank you for the food. We are working together. Much love to you all.','Nau~mai!|w Noho~mai.|w Kei~te|k pīrangi|n koe|a ki~te|k parāoa?|n Āe,|w kia~ora~mō~te~kai.|w E|k mahi~tahi|n ana|k tātou.|a Arohanui|w ki~a~koutou.|a','NOW-my! NOH-hoh MY. kay teh PEE-rah-ngee KOH-eh kee teh pah-RAH-or-ah? AH-eh, KEE-ah OR-ah mor teh KYE. eh MAH-hee TAH-hee AH-nah TAH-toh. ah-ROH-hah-NOO-ee kee ah KOH-toh','Terms 1 and 3 together.',null,'Whole class'],
+          ['Rehearse your showcase kōrero with a partner: at least six sentences, then finish with goodbye.','Nau~mai!|w Noho~mai.|w Anei|k te|k ___.|n …|x Kia~ora~mō~te~kai.|w Ka~kite!|w','NOW-my! NOH-hoh MY. AH-neh-ee teh ___. … KEE-ah OR-ah mor teh KYE. kah KEE-teh','Choose from the vocab card in this order: welcome, sit, offer, answer, thanks, help, goodbye.','Turn to your partner. Say your whole hākari kōrero once. Your partner listens, says Ka pai!, and tells you one star. Then swap. If you forget a piece, glance at the vocab card. Take 2 minutes.','Pairs'],
+          ['Showcase: share your hākari kōrero. Everyone else says Ka pai!','Ka~pai!|w Ka~rawe!|w Kia~kaha!|w','kah PIE · kah RAH-weh · KEE-ah KAH-hah','Celebrate every voice.','Invite pairs or trios to share, one after another. After each, the whole class says Ka pai! Remind them: if someone stumbles, that’s my fault, not theirs. Finish with a class Ka rawe! and Arohanui ki a koutou.','Individual']],
+        DR:{title:'Te Hākari o te Whānau — The Family Hākari',cast:CAST_TAMA_KUIA,lines:[
+          ['Kuia Mere','Nau mai, tamariki! He hākari tēnei!','Welcome, children! This is a feast!','(opens her arms)','T3W8'],
+          ['Hana','Tēnā koe, Kuia. Kei te harikoa ahau!','Greetings, Kuia. I am happy!','(stands tall)','T1W2'],
+          ['Tama','Kia ora, Kuia. Kei te hiakai au.','Hello, Kuia. I am hungry.','(rubs his tummy)','T3W7'],
+          ['Kuia Mere','Noho mai. Anei te parāoa.','Sit down. Here is the bread.','(holds out a picture card)','T3W8'],
+          ['Tama','Kia ora mō te kai, Kuia.','Thank you for the food, Kuia.','(hands together)','T1W9'],
+          ['Hana','Kei te pīrangi koe ki te mīti, Tama?','Do you want meat, Tama?','(passes another card)','T3W1'],
+          ['Tama','Kāo, kāore ahau i te hiakai.','No, I am not hungry.','(pats his full tummy)','T3W6'],
+          ['Kuia Mere','E mahi tahi ana tātou!','We are working together!','(links her hands)'],
+          ['Hana','Ka āwhina ahau āpōpō, Kuia!','I will help tomorrow, Kuia!','(points ahead)','T3W9'],
+          ['Tama','Ka hapai ahau i te kapu, Kuia!','I will carry the cup, Kuia!','(takes a cup carefully)','T3W9'],
+          ['Kuia Mere','Ka pai tō mahi, Tama! Kia ora mō tō āwhina.','Your work is good, Tama! Thank you for your help.','(smiles warmly)','T3W9'],
+          ['Kuia Mere','E aroha ana te Atua ki a koutou.','God loves all of you.','(to the audience, in English) Serve the Lord with gladness. When we use the gifts God has given us to welcome, feed and help each other, we are serving him. That is manaaki. Arohanui to you all.','T1W9'],
+          ['Tama','Kia ora, Kuia. Arohanui. Ka kite!','Thank you, Kuia. Much love. See you!','(Hana waves too)','T1W9']]},
+        EX:[['Say in te reo: ‘We are working together.’','E mahi tahi ana tātou.'],['What does arohanui mean?','Much love / with love.'],['Choose the word: ____ mahi tahi tātou inanahi. (We worked together yesterday.) (I / Ka)','I'],['Say in te reo: ‘Welcome! Sit down. Thank you for the food.’','Nau mai! Noho mai. Kia ora mō te kai.'],['Stretch: say ‘We are working together. Much love to you all.’ then thank your partner for their help.','E mahi tahi ana tātou. Arohanui ki a koutou. Kia ora mō tō āwhina.']],
+        CE:['Leaving out ana, or splitting mahi and tahi apart','Not knowing that arohanui means much love and is a warm way to finish','Using Ka (future) for something that has already happened','Mixing up nau mai (welcome) and noho mai (sit down)','Leaving out ki a before koutou, or leaving out mō tō in the thank you'],
+        T:'T3 W10 Lesson B',
+        LP:{title:'Te Hākari — Our hākari showcase',val:'Manaaki · Psalm 100:2',pat:['E mahi tahi ana ________.','Arohanui ki a ________.','Ka pai! Ka rawe! Kia kaha!'],swap:'Share your hākari kōrero in order: welcome · sit · offer · answer · thanks · help · goodbye. Work together: mahi tahi. Finish with arohanui. Cheer others with Ka pai! Ka rawe! Kia kaha!'}
+      }
+    };
+
+    addLessons({ '3.10.A': A, '3.10.B': B });
+  }
 
 })();
